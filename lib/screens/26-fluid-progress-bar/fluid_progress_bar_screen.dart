@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class FluidProgressBarScreen extends StatefulWidget {
+  const FluidProgressBarScreen({super.key});
+
   @override
   _FluidProgressBarScreenState createState() => _FluidProgressBarScreenState();
 }
 
 class _FluidProgressBarScreenState extends State<FluidProgressBarScreen>
     with TickerProviderStateMixin {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   int _currentStep = 0;
   final int _totalSteps = 4;
   
@@ -388,12 +390,12 @@ class FluidProgressBar extends StatelessWidget {
   final Animation<double> bubbleAnimation;
 
   const FluidProgressBar({
-    Key? key,
+    super.key,
     required this.currentStep,
     required this.totalSteps,
     required this.progressAnimation,
     required this.bubbleAnimation,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

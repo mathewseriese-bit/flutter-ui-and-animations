@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class PopupTextAnimationScreen extends StatefulWidget {
+  const PopupTextAnimationScreen({super.key});
+
   @override
   _PopupTextAnimationScreenState createState() =>
       _PopupTextAnimationScreenState();
@@ -306,6 +308,8 @@ class _PopupTextAnimationScreenState extends State<PopupTextAnimationScreen>
 
 // Typewriter Popup
 class TypewriterPopup extends StatefulWidget {
+  const TypewriterPopup({super.key});
+
   @override
   _TypewriterPopupState createState() => _TypewriterPopupState();
 }
@@ -316,7 +320,7 @@ class _TypewriterPopupState extends State<TypewriterPopup>
   String _displayText = '';
   final String _fullText =
       'Welcome to the amazing world of Flutter animations!';
-  int _currentIndex = 0;
+  final int _currentIndex = 0;
 
   @override
   void initState() {
@@ -361,7 +365,7 @@ class _TypewriterPopupState extends State<TypewriterPopup>
           children: [
             Icon(Icons.keyboard, color: Colors.purple, size: 48),
             SizedBox(height: 20),
-            Container(
+            SizedBox(
               height: 100,
               child: Center(
                 child: RichText(
@@ -406,6 +410,8 @@ class _TypewriterPopupState extends State<TypewriterPopup>
 
 // Glitch Popup
 class GlitchPopup extends StatefulWidget {
+  const GlitchPopup({super.key});
+
   @override
   _GlitchPopupState createState() => _GlitchPopupState();
 }
@@ -516,6 +522,8 @@ class _GlitchPopupState extends State<GlitchPopup>
 
 // Neon Popup
 class NeonPopup extends StatefulWidget {
+  const NeonPopup({super.key});
+
   @override
   _NeonPopupState createState() => _NeonPopupState();
 }
@@ -630,6 +638,8 @@ class _NeonPopupState extends State<NeonPopup>
 
 // Particle Popup
 class ParticlePopup extends StatefulWidget {
+  const ParticlePopup({super.key});
+
   @override
   _ParticlePopupState createState() => _ParticlePopupState();
 }
@@ -703,7 +713,7 @@ class _ParticlePopupState extends State<ParticlePopup>
                       ),
                     ),
                   );
-                }).toList(),
+                }),
 
                 // Content
                 Center(
@@ -776,6 +786,8 @@ class Particle {
 
 // Morphing Popup
 class MorphingPopup extends StatefulWidget {
+  const MorphingPopup({super.key});
+
   @override
   _MorphingPopupState createState() => _MorphingPopupState();
 }
@@ -878,6 +890,8 @@ class _MorphingPopupState extends State<MorphingPopup>
 
 // Holographic Popup
 class HolographicPopup extends StatefulWidget {
+  const HolographicPopup({super.key});
+
   @override
   _HolographicPopupState createState() => _HolographicPopupState();
 }

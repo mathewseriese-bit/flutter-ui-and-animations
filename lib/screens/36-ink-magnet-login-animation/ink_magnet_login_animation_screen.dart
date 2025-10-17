@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class InkMagnetLoginAnimationScreen extends StatefulWidget {
+  const InkMagnetLoginAnimationScreen({super.key});
+
   @override
   _InkMagnetLoginAnimationScreenState createState() =>
       _InkMagnetLoginAnimationScreenState();
@@ -22,7 +24,7 @@ class _InkMagnetLoginAnimationScreenState
 
   bool _isAnimating = false;
   bool _showAvatar = false;
-  List<InkParticle> _particles = [];
+  final List<InkParticle> _particles = [];
 
   @override
   void initState() {
@@ -188,7 +190,7 @@ class _InkMagnetLoginAnimationScreenState
                   ),
 
                   // Animation Area
-                  Container(
+                  SizedBox(
                     width: 200,
                     height: 200,
                     child: Stack(

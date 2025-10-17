@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class ThreeDFloatingIconsScreen extends StatefulWidget {
+  const ThreeDFloatingIconsScreen({super.key});
+
   @override
   _ThreeDFloatingIconsScreenState createState() => _ThreeDFloatingIconsScreenState();
 }

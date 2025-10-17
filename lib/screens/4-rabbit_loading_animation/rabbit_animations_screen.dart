@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/services.dart';
 
 class RabbitAnimationsScreen extends StatefulWidget {
-  const RabbitAnimationsScreen({Key? key}) : super(key: key);
+  const RabbitAnimationsScreen({super.key});
 
   @override
   _RabbitAnimationsScreenState createState() => _RabbitAnimationsScreenState();

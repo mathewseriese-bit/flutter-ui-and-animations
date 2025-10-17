@@ -9,14 +9,14 @@ class AnimatedExpandableSearchBar extends StatefulWidget {
   final double height;
 
   const AnimatedExpandableSearchBar({
-    Key? key,
+    super.key,
     this.onSubmitted,
     this.onChanged,
     this.hintText = 'Search...',
     this.primaryColor = const Color(0xFF6C5CE7),
     this.backgroundColor = Colors.white,
     this.height = 56.0,
-  }) : super(key: key);
+  });
 
   @override
   State<AnimatedExpandableSearchBar> createState() =>
@@ -270,6 +270,8 @@ class _AnimatedExpandableSearchBarState
 
 // Example usage widget
 class ExpandableSearchbarAnimationScreen extends StatefulWidget {
+  const ExpandableSearchbarAnimationScreen({super.key});
+
   @override
   _ExpandableSearchbarAnimationScreenState createState() => _ExpandableSearchbarAnimationScreenState();
 }

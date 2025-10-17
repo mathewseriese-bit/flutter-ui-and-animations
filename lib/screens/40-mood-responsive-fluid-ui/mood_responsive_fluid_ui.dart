@@ -27,6 +27,8 @@ class MoodData {
 }
 
 class MoodResponsiveFluidUi extends StatefulWidget {
+  const MoodResponsiveFluidUi({super.key});
+
   @override
   _MoodResponsiveFluidUiState createState() => _MoodResponsiveFluidUiState();
 }

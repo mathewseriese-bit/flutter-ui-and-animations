@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class LikeFirework extends StatefulWidget {
+  const LikeFirework({super.key});
+
   @override
   _LikeFireworkState createState() => _LikeFireworkState();
 }
@@ -142,7 +144,7 @@ class FireworksLikeButton extends StatefulWidget {
   final bool initialLiked;
 
   const FireworksLikeButton({
-    Key? key,
+    super.key,
     this.onLikeChanged,
     this.likeCount,
     this.size = 60.0,
@@ -158,7 +160,7 @@ class FireworksLikeButton extends StatefulWidget {
     this.buttonColor = Colors.pink,
     this.fireworksDuration = const Duration(milliseconds: 1200),
     this.initialLiked = false,
-  }) : super(key: key);
+  });
 
   @override
   _FireworksLikeButtonState createState() => _FireworksLikeButtonState();
@@ -268,7 +270,7 @@ class _FireworksLikeButtonState extends State<FireworksLikeButton>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _handleLikeTap,
-      child: Container(
+      child: SizedBox(
         width: widget.size * 2.5,
         height: widget.size * 2.5,
         child: Stack(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class EmotionalEmojiScreen extends StatefulWidget {
+  const EmotionalEmojiScreen({super.key});
+
   @override
   _EmotionalEmojiScreenState createState() => _EmotionalEmojiScreenState();
 }

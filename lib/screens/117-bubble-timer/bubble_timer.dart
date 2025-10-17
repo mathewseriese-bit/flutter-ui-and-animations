@@ -3,6 +3,8 @@ import 'dart:async';
 import 'dart:math' as math;
 
 class BubbleTimerDemo extends StatefulWidget {
+  const BubbleTimerDemo({super.key});
+
   @override
   _BubbleTimerDemoState createState() => _BubbleTimerDemoState();
 }
@@ -104,7 +106,7 @@ class BubbleTimer extends StatefulWidget {
   final bool autoStart;
 
   const BubbleTimer({
-    Key? key,
+    super.key,
     required this.duration,
     this.size = 300,
     this.bubbleCount = 20,
@@ -116,7 +118,7 @@ class BubbleTimer extends StatefulWidget {
     this.onTimerComplete,
     this.onTick,
     this.autoStart = true,
-  }) : super(key: key);
+  });
 
   @override
   _BubbleTimerState createState() => _BubbleTimerState();
@@ -133,7 +135,7 @@ class _BubbleTimerState extends State<BubbleTimer>
   bool _isRunning = false;
   bool _isPaused = false;
   
-  List<BubbleData> _bubbles = [];
+  final List<BubbleData> _bubbles = [];
   final math.Random _random = math.Random();
 
   @override
@@ -308,7 +310,7 @@ class _BubbleTimerState extends State<BubbleTimer>
         }
       },
       onDoubleTap: resetTimer,
-      child: Container(
+      child: SizedBox(
         width: widget.size,
         height: widget.size,
         child: Stack(

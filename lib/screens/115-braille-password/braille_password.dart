@@ -4,6 +4,8 @@ import 'dart:math' as math;
 
 
 class BraillePassword extends StatefulWidget {
+  const BraillePassword({super.key});
+
   @override
   _BraillePasswordState createState() => _BraillePasswordState();
 }
@@ -201,7 +203,7 @@ class AnimatedBraillePassword extends StatefulWidget {
   final bool enableHapticFeedback;
 
   const AnimatedBraillePassword({
-    Key? key,
+    super.key,
     this.controller,
     this.maxLength = 8,
     this.onChanged,
@@ -216,7 +218,7 @@ class AnimatedBraillePassword extends StatefulWidget {
     this.showLabel = false,
     this.labelText = 'Password',
     this.enableHapticFeedback = true,
-  }) : super(key: key);
+  });
 
   @override
   _AnimatedBraillePasswordState createState() => _AnimatedBraillePasswordState();
@@ -234,8 +236,8 @@ class _AnimatedBraillePasswordState extends State<AnimatedBraillePassword>
   
   String _password = '';
   bool _isFocused = false;
-  List<AnimationController> _dotControllers = [];
-  List<Animation<double>> _dotAnimations = [];
+  final List<AnimationController> _dotControllers = [];
+  final List<Animation<double>> _dotAnimations = [];
 
   @override
   void initState() {
@@ -384,7 +386,7 @@ class _AnimatedBraillePasswordState extends State<AnimatedBraillePassword>
             ],
             
             // Braille Dots Display with responsive sizing
-            Container(
+            SizedBox(
               height: 60,
               width: double.infinity,
               child: Center(

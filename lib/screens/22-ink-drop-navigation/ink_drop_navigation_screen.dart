@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class InkDropNavigationScreen extends StatefulWidget {
-  const InkDropNavigationScreen({Key? key}) : super(key: key);
+  const InkDropNavigationScreen({super.key});
 
   @override
   State<InkDropNavigationScreen> createState() => _InkDropNavigationScreenState();
@@ -399,7 +399,7 @@ class NavigationItem {
 
 // Content Widgets
 class HomeContent extends StatelessWidget {
-  const HomeContent({Key? key}) : super(key: key);
+  const HomeContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -481,7 +481,7 @@ class HomeContent extends StatelessWidget {
 }
 
 class SearchContent extends StatelessWidget {
-  const SearchContent({Key? key}) : super(key: key);
+  const SearchContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -550,7 +550,7 @@ class SearchContent extends StatelessWidget {
 }
 
 class FavoritesContent extends StatelessWidget {
-  const FavoritesContent({Key? key}) : super(key: key);
+  const FavoritesContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -640,7 +640,7 @@ class FavoritesContent extends StatelessWidget {
 }
 
 class ProfileContent extends StatelessWidget {
-  const ProfileContent({Key? key}) : super(key: key);
+  const ProfileContent({super.key});
 
   @override
   Widget build(BuildContext context) {

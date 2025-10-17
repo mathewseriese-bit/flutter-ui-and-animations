@@ -12,7 +12,7 @@ class SlotMachineSwitch extends StatefulWidget {
   final Color inactiveColor;
 
   const SlotMachineSwitch({
-    Key? key,
+    super.key,
     required this.value,
     this.onChanged,
     this.width = 120,
@@ -21,7 +21,7 @@ class SlotMachineSwitch extends StatefulWidget {
     this.symbols = const ['🎰', '💎', '🍀', '⭐', '🎯', '🔥'],
     this.activeColor = const Color(0xFF6C63FF),
     this.inactiveColor = const Color(0xFF9E9E9E),
-  }) : super(key: key);
+  });
 
   @override
   State<SlotMachineSwitch> createState() => _SlotMachineSwitchState();
@@ -345,6 +345,8 @@ class SlotMachineBackgroundPainter extends CustomPainter {
 
 // Demo app to showcase the slot machine switch
 class SlotMachineSwitchScreen extends StatefulWidget {
+  const SlotMachineSwitchScreen({super.key});
+
   @override
   _SlotMachineSwitchScreenState createState() => _SlotMachineSwitchScreenState();
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AchievementUiScreen extends StatefulWidget {
+  const AchievementUiScreen({super.key});
+
   @override
   _AchievementUiScreenState createState() => _AchievementUiScreenState();
 }
@@ -94,7 +96,7 @@ class AchievementMilestoneUI extends StatefulWidget {
   final bool showPulseEffect;
 
   const AchievementMilestoneUI({
-    Key? key,
+    super.key,
     required this.title,
     required this.subtitle,
     required this.achievementType,
@@ -106,7 +108,7 @@ class AchievementMilestoneUI extends StatefulWidget {
     this.showConfetti = true,
     this.showParticles = true,
     this.showPulseEffect = true,
-  }) : super(key: key);
+  });
 
   @override
   _AchievementMilestoneUIState createState() => _AchievementMilestoneUIState();

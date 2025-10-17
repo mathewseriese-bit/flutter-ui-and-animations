@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AdvanceCarouselAnimationScreen extends StatefulWidget {
+  const AdvanceCarouselAnimationScreen({super.key});
+
   @override
   _AdvanceCarouselAnimationScreenState createState() => _AdvanceCarouselAnimationScreenState();
 }
@@ -241,7 +243,7 @@ class _AdvanceCarouselAnimationScreenState extends State<AdvanceCarouselAnimatio
                     padding: EdgeInsets.all(20),
                     child: FadeTransition(
                       opacity: _fadeAnimation,
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         height: 56,
                         child: ElevatedButton(
@@ -283,10 +285,10 @@ class CarouselCard extends StatefulWidget {
   final bool isActive;
 
   const CarouselCard({
-    Key? key,
+    super.key,
     required this.item,
     required this.isActive,
-  }) : super(key: key);
+  });
 
   @override
   _CarouselCardState createState() => _CarouselCardState();

@@ -12,14 +12,14 @@ class TimeBombCountdown extends StatefulWidget {
   final bool playSounds;
   
   const TimeBombCountdown({
-    Key? key,
+    super.key,
     required this.deadline,
     required this.onExpired,
     this.onCompleted,
     this.alertThreshold = const Duration(hours: 24),
     this.criticalThreshold = const Duration(hours: 1),
     this.playSounds = true,
-  }) : super(key: key);
+  });
 
   @override
   State<TimeBombCountdown> createState() => _TimeBombCountdownState();
@@ -428,7 +428,7 @@ class _TimeBombCountdownState extends State<TimeBombCountdown> with TickerProvid
 
                     // Center bomb content
                     Center(
-                      child: Container(
+                      child: SizedBox(
                         width: 300, // Increased size
                         height: 300, // Increased size
                         child: Stack(
@@ -843,12 +843,12 @@ class DeadlineTaskCard extends StatelessWidget {
   final VoidCallback onMarkCompleted;
 
   const DeadlineTaskCard({
-    Key? key,
+    super.key,
     required this.taskTitle,
     required this.taskDescription,
     required this.deadline,
     required this.onMarkCompleted,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

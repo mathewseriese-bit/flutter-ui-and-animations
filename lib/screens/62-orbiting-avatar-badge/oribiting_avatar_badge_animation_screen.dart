@@ -11,7 +11,7 @@ class OrbitingAvatarBadge extends StatefulWidget {
   final Duration orbitDuration;
   
   const OrbitingAvatarBadge({
-    Key? key,
+    super.key,
     this.imageUrl,
     this.size = 120.0,
     this.badgeText = 'ONLINE',
@@ -19,7 +19,7 @@ class OrbitingAvatarBadge extends StatefulWidget {
     this.glowColor = const Color(0xFF00FF88),
     this.orbitRadius = 60.0,
     this.orbitDuration = const Duration(seconds: 8),
-  }) : super(key: key);
+  });
 
   @override
   State<OrbitingAvatarBadge> createState() => _OrbitingAvatarBadgeState();
@@ -94,7 +94,7 @@ class _OrbitingAvatarBadgeState extends State<OrbitingAvatarBadge>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: widget.size + (widget.orbitRadius * 2) + 40,
       height: widget.size + (widget.orbitRadius * 2) + 40,
       child: AnimatedBuilder(
@@ -293,6 +293,8 @@ class _OrbitingAvatarBadgeState extends State<OrbitingAvatarBadge>
 
 // Demo usage in your app
 class OribitingAvatarBadgeAnimationScreen extends StatelessWidget {
+  const OribitingAvatarBadgeAnimationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

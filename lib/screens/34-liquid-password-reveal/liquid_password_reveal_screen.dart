@@ -87,6 +87,8 @@ class ProgressiveTextPainter extends CustomPainter {
 }
 
 class LiquidPasswordRevealScreen extends StatefulWidget {
+  const LiquidPasswordRevealScreen({super.key});
+
   @override
   _LiquidPasswordRevealScreenState createState() => _LiquidPasswordRevealScreenState();
 }
@@ -98,10 +100,10 @@ class _LiquidPasswordRevealScreenState extends State<LiquidPasswordRevealScreen>
   late Animation<double> _liquidAnimation;
   late Animation<double> _glowAnimation;
   
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   bool _isRevealed = false;
   bool _isAnimating = false;
-  String _actualPassword = "MySecurePassword123!";
+  final String _actualPassword = "MySecurePassword123!";
 
   @override
   void initState() {
@@ -244,7 +246,7 @@ class _LiquidPasswordRevealScreenState extends State<LiquidPasswordRevealScreen>
                 SizedBox(height: 60),
                 
                 // Password Field Container
-                Container(
+                SizedBox(
                   height: 200,
                   child: Stack(
                     children: [

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AiChatBubbleMorphingAnimationScreen extends StatefulWidget {
-  const AiChatBubbleMorphingAnimationScreen({Key? key}) : super(key: key);
+  const AiChatBubbleMorphingAnimationScreen({super.key});
 
   @override
   State<AiChatBubbleMorphingAnimationScreen> createState() => _AiChatBubbleMorphingAnimationScreenState();
@@ -247,11 +247,11 @@ class MorphingChatBubble extends StatefulWidget {
   final bool isLatest;
 
   const MorphingChatBubble({
-    Key? key,
+    super.key,
     required this.message,
     required this.morphController,
     required this.isLatest,
-  }) : super(key: key);
+  });
 
   @override
   State<MorphingChatBubble> createState() => _MorphingChatBubbleState();
@@ -393,10 +393,10 @@ class ThinkingBubble extends StatelessWidget {
   final AnimationController glowController;
 
   const ThinkingBubble({
-    Key? key,
+    super.key,
     required this.thinkingController,
     required this.glowController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -454,7 +454,7 @@ class ThinkingBubble extends StatelessWidget {
 class ThinkingDots extends StatelessWidget {
   final AnimationController controller;
 
-  const ThinkingDots({Key? key, required this.controller}) : super(key: key);
+  const ThinkingDots({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {

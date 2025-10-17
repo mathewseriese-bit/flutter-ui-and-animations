@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class DiagonalPageRevealAnimationScreen extends StatelessWidget {
-  const DiagonalPageRevealAnimationScreen({Key? key}) : super(key: key);
+  const DiagonalPageRevealAnimationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class DiagonalPageRevealAnimationScreen extends StatelessWidget {
 }
 
 class DiagonalPageView extends StatefulWidget {
-  const DiagonalPageView({Key? key}) : super(key: key);
+  const DiagonalPageView({super.key});
 
   @override
   State<DiagonalPageView> createState() => _DiagonalPageViewState();

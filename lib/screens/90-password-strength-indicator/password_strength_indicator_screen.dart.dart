@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PasswordStrengthIndicatorScreen extends StatefulWidget {
+  const PasswordStrengthIndicatorScreen({super.key});
+
   @override
   _PasswordStrengthIndicatorScreenState createState() => _PasswordStrengthIndicatorScreenState();
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class ShakeDeleteScreen extends StatefulWidget {
+  const ShakeDeleteScreen({super.key});
+
   @override
   _ShakeDeleteScreenState createState() => _ShakeDeleteScreenState();
 }
@@ -116,10 +118,10 @@ class ShakeToDeleteCard extends StatefulWidget {
   final VoidCallback onDelete;
 
   const ShakeToDeleteCard({
-    Key? key,
+    super.key,
     required this.cardData,
     required this.onDelete,
-  }) : super(key: key);
+  });
 
   @override
   _ShakeToDeleteCardState createState() => _ShakeToDeleteCardState();

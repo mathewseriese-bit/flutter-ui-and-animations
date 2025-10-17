@@ -73,6 +73,8 @@ final List<Story> dummyStories = [
 
 // Main Stories Home Page
 class PageFlipAnimationScreen extends StatefulWidget {
+  const PageFlipAnimationScreen({super.key});
+
   @override
   _PageFlipAnimationScreenState createState() => _PageFlipAnimationScreenState();
 }
@@ -182,7 +184,7 @@ class _PageFlipAnimationScreenState extends State<PageFlipAnimationScreen>
             animation: _cardController,
             builder: (context, child) {
               final animationValue = Curves.elasticOut.transform(
-                (math.max(0.0, (_cardController.value - (index * 0.1))).clamp(0.0, 1.0) as double)
+                math.max(0.0, (_cardController.value - (index * 0.1))).clamp(0.0, 1.0)
               );
               
               return Container(
@@ -337,14 +339,14 @@ class _PageFlipAnimationScreenState extends State<PageFlipAnimationScreen>
 class StoryReaderPage extends StatefulWidget {
   final Story story;
 
-  const StoryReaderPage({Key? key, required this.story}) : super(key: key);
+  const StoryReaderPage({super.key, required this.story});
 
   @override
   _StoryReaderPageState createState() => _StoryReaderPageState();
 }
 
 class _StoryReaderPageState extends State<StoryReaderPage> with TickerProviderStateMixin {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   int _currentPage = 0;
   late AnimationController _flipController;
   late Animation<double> _flipAnimation;

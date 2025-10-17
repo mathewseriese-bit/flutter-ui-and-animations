@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class OrigamiFoldUIScreen extends StatefulWidget {
-  const OrigamiFoldUIScreen({Key? key}) : super(key: key);
+  const OrigamiFoldUIScreen({super.key});
 
   @override
   State<OrigamiFoldUIScreen> createState() => _OrigamiFoldUIScreenState();
@@ -203,14 +203,14 @@ class OrigamiFoldCard extends StatelessWidget {
   final VoidCallback onTap;
 
   const OrigamiFoldCard({
-    Key? key,
+    super.key,
     required this.section,
     required this.isExpanded,
     required this.animation,
     required this.scaleAnimation,
     required this.opacityAnimation,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

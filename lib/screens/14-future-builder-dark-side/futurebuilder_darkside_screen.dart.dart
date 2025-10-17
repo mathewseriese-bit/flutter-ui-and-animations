@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'dart:convert';
 import 'dart:math';
 
 
 class FutureBuilderDarkSideScreen extends StatelessWidget {
+  const FutureBuilderDarkSideScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,6 +114,8 @@ class ApiService {
 
 // ❌ BAD IMPLEMENTATION - Creates Memory Leaks
 class BadImplementation extends StatefulWidget {
+  const BadImplementation({super.key});
+
   @override
   _BadImplementationState createState() => _BadImplementationState();
 }
@@ -255,8 +258,8 @@ class _BadImplementationState extends State<BadImplementation> {
           });
         },
         backgroundColor: Colors.red,
-        child: Icon(Icons.add),
         tooltip: 'Increment (triggers rebuild)',
+        child: Icon(Icons.add),
       ),
     );
   }
@@ -264,6 +267,8 @@ class _BadImplementationState extends State<BadImplementation> {
 
 // ✅ GOOD IMPLEMENTATION - No Memory Leaks
 class GoodImplementation extends StatefulWidget {
+  const GoodImplementation({super.key});
+
   @override
   _GoodImplementationState createState() => _GoodImplementationState();
 }
@@ -428,8 +433,8 @@ class _GoodImplementationState extends State<GoodImplementation> {
           });
         },
         backgroundColor: Colors.green,
-        child: Icon(Icons.add),
         tooltip: 'Increment (no extra API calls)',
+        child: Icon(Icons.add),
       ),
     );
   }

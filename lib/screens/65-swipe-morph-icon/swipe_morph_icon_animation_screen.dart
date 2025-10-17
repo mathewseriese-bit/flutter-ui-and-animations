@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'dart:math' as math;
 
 class SwipeMorphIconAnimationScreen extends StatefulWidget {
-  const SwipeMorphIconAnimationScreen({Key? key}) : super(key: key);
+  const SwipeMorphIconAnimationScreen({super.key});
 
   @override
   State<SwipeMorphIconAnimationScreen> createState() => _SwipeMorphIconAnimationScreenState();

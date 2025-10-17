@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 
 class UnlockAnimationScreen extends StatelessWidget {
+  const UnlockAnimationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +30,8 @@ class UnlockAnimationScreen extends StatelessWidget {
 }
 
 class FuturisticUnlockButton extends StatefulWidget {
+  const FuturisticUnlockButton({super.key});
+
   @override
   _FuturisticUnlockButtonState createState() => _FuturisticUnlockButtonState();
 }

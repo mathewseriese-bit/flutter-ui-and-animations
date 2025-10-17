@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class BlobbyButtonExpansionScreen extends StatefulWidget {
+  const BlobbyButtonExpansionScreen({super.key});
+
   @override
   _BlobbyButtonExpansionScreenState createState() => _BlobbyButtonExpansionScreenState();
 }
@@ -112,7 +114,7 @@ class RippleWaveButton extends StatefulWidget {
   final bool isActive;
   final VoidCallback onTap;
 
-  const RippleWaveButton({
+  const RippleWaveButton({super.key, 
     required this.index,
     required this.isActive,
     required this.onTap,
@@ -165,7 +167,7 @@ class _RippleWaveButtonState extends State<RippleWaveButton>
       builder: (context, child) {
         return CustomPaint(
           painter: RippleWavePainter(_waveAnimation.value),
-          child: Container(
+          child: SizedBox(
             width: 60 + (180 * _waveAnimation.value),
             height: 60 + (180 * _waveAnimation.value),
             child: Material(
@@ -275,7 +277,7 @@ class SpiralGalaxyButton extends StatefulWidget {
   final bool isActive;
   final VoidCallback onTap;
 
-  const SpiralGalaxyButton({
+  const SpiralGalaxyButton({super.key, 
     required this.index,
     required this.isActive,
     required this.onTap,
@@ -322,7 +324,7 @@ class _SpiralGalaxyButtonState extends State<SpiralGalaxyButton> with SingleTick
       builder: (context, child) {
         return CustomPaint(
           painter: SpiralGalaxyPainter(_controller.value),
-          child: Container(
+          child: SizedBox(
             width: 60 + (200 * _controller.value),
             height: 60 + (200 * _controller.value),
             child: Material(
@@ -437,7 +439,7 @@ class BouncingBlobButton extends StatefulWidget {
   final bool isActive;
   final VoidCallback onTap;
 
-  const BouncingBlobButton({
+  const BouncingBlobButton({super.key, 
     required this.index,
     required this.isActive,
     required this.onTap,

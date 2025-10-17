@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class ScrollAnimationScreen extends StatefulWidget {
+  const ScrollAnimationScreen({super.key});
+
   @override
   _ScrollAnimationScreenState createState() =>
       _ScrollAnimationScreenState();
@@ -168,7 +170,7 @@ class _ScrollAnimationScreenState
             slivers: [
               // Header
               SliverToBoxAdapter(
-                child: Container(
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.7,
                   child: Center(
                     child: Column(
@@ -259,7 +261,7 @@ class _ScrollAnimationScreenState
               
               // Footer
               SliverToBoxAdapter(
-                child: Container(
+                child: SizedBox(
                   height: 200,
                   child: Center(
                     child: Text(
@@ -285,8 +287,7 @@ class FuturisticCard extends StatefulWidget {
   final ItemData item;
   final int index;
 
-  const FuturisticCard({Key? key, required this.item, required this.index})
-      : super(key: key);
+  const FuturisticCard({super.key, required this.item, required this.index});
 
   @override
   _FuturisticCardState createState() => _FuturisticCardState();

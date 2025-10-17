@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class PalestineFlagScreen extends StatefulWidget {
-  const PalestineFlagScreen({Key? key}) : super(key: key);
+  const PalestineFlagScreen({super.key});
 
   @override
   State<PalestineFlagScreen> createState() => _PalestineFlagScreenState();
@@ -391,7 +391,7 @@ class BloodSplatter extends StatelessWidget {
   final Size size;
   final Color color;
 
-  const BloodSplatter({Key? key, required this.size, required this.color}) : super(key: key);
+  const BloodSplatter({super.key, required this.size, required this.color});
 
   @override
   Widget build(BuildContext context) {

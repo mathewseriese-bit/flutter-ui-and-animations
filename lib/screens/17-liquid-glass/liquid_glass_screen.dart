@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'dart:math' as math;
 
 class LiquidGlassLoginScreen extends StatefulWidget {
+  const LiquidGlassLoginScreen({super.key});
+
   @override
   _LiquidGlassLoginScreenState createState() => _LiquidGlassLoginScreenState();
 }
@@ -430,7 +432,7 @@ class _LiquidGlassLoginScreenState extends State<LiquidGlassLoginScreen>
     return AnimatedBuilder(
       animation: _rippleAnimation,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: double.infinity,
           height: 56,
           child: Stack(

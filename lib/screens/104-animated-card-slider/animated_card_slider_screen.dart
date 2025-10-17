@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AnimatedCardSliderScreen extends StatefulWidget {
+  const AnimatedCardSliderScreen({super.key});
+
   @override
   _AnimatedCardSliderScreenState createState() => _AnimatedCardSliderScreenState();
 }
@@ -183,12 +185,14 @@ class _AnimatedCardSliderScreenState extends State<AnimatedCardSliderScreen>
 
 // Style 1: Glassmorphism Slider
 class GlassmorphismSlider extends StatefulWidget {
+  const GlassmorphismSlider({super.key});
+
   @override
   _GlassmorphismSliderState createState() => _GlassmorphismSliderState();
 }
 
 class _GlassmorphismSliderState extends State<GlassmorphismSlider> {
-  PageController _pageController = PageController(viewportFraction: 0.8);
+  final PageController _pageController = PageController(viewportFraction: 0.8);
   int currentPage = 0;
 
   final List<Map<String, dynamic>> cards = [
@@ -321,13 +325,15 @@ class _GlassmorphismSliderState extends State<GlassmorphismSlider> {
 
 // Style 2: Neon Glow Slider
 class NeonGlowSlider extends StatefulWidget {
+  const NeonGlowSlider({super.key});
+
   @override
   _NeonGlowSliderState createState() => _NeonGlowSliderState();
 }
 
 class _NeonGlowSliderState extends State<NeonGlowSlider>
     with TickerProviderStateMixin {
-  PageController _pageController = PageController(viewportFraction: 0.85);
+  final PageController _pageController = PageController(viewportFraction: 0.85);
   late AnimationController _glowController;
 
   final List<Map<String, dynamic>> cards = [
@@ -441,6 +447,8 @@ class _NeonGlowSliderState extends State<NeonGlowSlider>
 
 // Style 3: Floating Cards Slider
 class FloatingCardsSlider extends StatefulWidget {
+  const FloatingCardsSlider({super.key});
+
   @override
   _FloatingCardsSliderState createState() => _FloatingCardsSliderState();
 }
@@ -448,7 +456,7 @@ class FloatingCardsSlider extends StatefulWidget {
 class _FloatingCardsSliderState extends State<FloatingCardsSlider>
     with TickerProviderStateMixin {
   late AnimationController _floatingController;
-  PageController _pageController = PageController(viewportFraction: 0.7);
+  final PageController _pageController = PageController(viewportFraction: 0.7);
 
   final List<Map<String, dynamic>> cards = [
     {
@@ -565,12 +573,14 @@ class _FloatingCardsSliderState extends State<FloatingCardsSlider>
 
 // Style 4: 3D Perspective Slider
 class PerspectiveSlider extends StatefulWidget {
+  const PerspectiveSlider({super.key});
+
   @override
   _PerspectiveSliderState createState() => _PerspectiveSliderState();
 }
 
 class _PerspectiveSliderState extends State<PerspectiveSlider> {
-  PageController _pageController = PageController(viewportFraction: 0.8);
+  final PageController _pageController = PageController(viewportFraction: 0.8);
   double currentPageValue = 0.0;
 
   final List<Map<String, dynamic>> cards = [
@@ -684,6 +694,8 @@ class _PerspectiveSliderState extends State<PerspectiveSlider> {
 
 // Style 5: Liquid Motion Slider
 class LiquidMotionSlider extends StatefulWidget {
+  const LiquidMotionSlider({super.key});
+
   @override
   _LiquidMotionSliderState createState() => _LiquidMotionSliderState();
 }
@@ -691,7 +703,7 @@ class LiquidMotionSlider extends StatefulWidget {
 class _LiquidMotionSliderState extends State<LiquidMotionSlider>
     with TickerProviderStateMixin {
   late AnimationController _liquidController;
-  PageController _pageController = PageController(viewportFraction: 0.8);
+  final PageController _pageController = PageController(viewportFraction: 0.8);
 
   final List<Map<String, dynamic>> cards = [
     {

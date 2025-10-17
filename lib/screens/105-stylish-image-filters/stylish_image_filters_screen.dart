@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dart:ui' as ui;
 import 'dart:async';
 import 'dart:math' as math;
 
 class StylishImageFiltersScreen extends StatefulWidget {
+  const StylishImageFiltersScreen({super.key});
+
   @override
   _StylishImageFiltersScreenState createState() =>
       _StylishImageFiltersScreenState();
@@ -210,7 +211,7 @@ class _StylishImageFiltersScreenState extends State<StylishImageFiltersScreen>
             child: Stack(
               children: [
                 // ...existing code...
-                Container(
+                SizedBox(
                   width: double.infinity,
                   height: double.infinity,
                   child: Image.network(
@@ -320,7 +321,7 @@ class _StylishImageFiltersScreenState extends State<StylishImageFiltersScreen>
   }
 
   Widget _buildFiltersList() {
-    return Container(
+    return SizedBox(
       height: 120,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,

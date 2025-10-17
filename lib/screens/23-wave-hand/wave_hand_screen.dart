@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class WaveHandScreen extends StatefulWidget {
+  const WaveHandScreen({super.key});
+
   @override
   _WaveHandScreenState createState() => _WaveHandScreenState();
 }

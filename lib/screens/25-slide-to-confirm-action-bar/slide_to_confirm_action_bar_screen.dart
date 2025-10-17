@@ -16,7 +16,7 @@ class SlideToConfirmActionBar extends StatefulWidget {
   final bool enabled;
 
   const SlideToConfirmActionBar({
-    Key? key,
+    super.key,
     this.text = 'Slide to confirm',
     this.confirmText = 'Confirmed!',
     this.onConfirm,
@@ -29,7 +29,7 @@ class SlideToConfirmActionBar extends StatefulWidget {
     this.icon = Icons.arrow_forward_ios,
     this.animationDuration = const Duration(milliseconds: 300),
     this.enabled = true,
-  }) : super(key: key);
+  });
 
   @override
   State<SlideToConfirmActionBar> createState() => _SlideToConfirmActionBarState();
@@ -411,6 +411,8 @@ class ShimmerPainter extends CustomPainter {
 
 // Example usage
 class SlideToConfirmDemo extends StatelessWidget {
+  const SlideToConfirmDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,6 +3,8 @@ import 'dart:async';
 import 'dart:math' as math;
 
 class TypingTextAnimationScreen extends StatefulWidget {
+  const TypingTextAnimationScreen({super.key});
+
   @override
   _TypingTextAnimationScreenState createState() => _TypingTextAnimationScreenState();
 }
@@ -138,7 +140,7 @@ class _TypingTextAnimationScreenState extends State<TypingTextAnimationScreen>
   void _startDeleting() {
     _typingTimer = Timer.periodic(Duration(milliseconds: 50), (timer) {
       setState(() {
-        if (_currentText.length > 0) {
+        if (_currentText.isNotEmpty) {
           _currentText = _currentText.substring(0, _currentText.length - 1);
         } else {
           timer.cancel();

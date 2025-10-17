@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class GlowingButtonsAnimationScreen extends StatefulWidget {
-  const GlowingButtonsAnimationScreen({Key? key}) : super(key: key);
+  const GlowingButtonsAnimationScreen({super.key});
 
   @override
   State<GlowingButtonsAnimationScreen> createState() => _GlowingButtonsAnimationScreenState();

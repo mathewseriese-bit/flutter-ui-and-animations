@@ -18,6 +18,8 @@ class ListItem {
 }
 
 class DargReorderListScreen extends StatefulWidget {
+  const DargReorderListScreen({super.key});
+
   @override
   _DargReorderListScreenState createState() => _DargReorderListScreenState();
 }
@@ -249,11 +251,11 @@ class AnimatedListTile extends StatefulWidget {
   final Animation<double> animation;
 
   const AnimatedListTile({
-    Key? key,
+    super.key,
     required this.item,
     required this.index,
     required this.animation,
-  }) : super(key: key);
+  });
 
   @override
   _AnimatedListTileState createState() => _AnimatedListTileState();

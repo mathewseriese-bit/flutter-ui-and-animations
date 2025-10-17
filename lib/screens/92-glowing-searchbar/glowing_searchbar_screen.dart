@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class GlowingSearchbarScreen extends StatelessWidget {
+  const GlowingSearchbarScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +34,8 @@ class GlowingSearchbarScreen extends StatelessWidget {
 }
 
 class GlowingSearchbar extends StatefulWidget {
+  const GlowingSearchbar({super.key});
+
   @override
   _GlowingSearchbarState createState() => _GlowingSearchbarState();
 }
@@ -43,8 +47,8 @@ class _GlowingSearchbarState extends State<GlowingSearchbar>
   late Animation<double> _glowAnimation;
   late Animation<double> _borderAnimation;
   
-  TextEditingController _textController = TextEditingController();
-  FocusNode _focusNode = FocusNode();
+  final TextEditingController _textController = TextEditingController();
+  final FocusNode _focusNode = FocusNode();
   bool _isFocused = false;
   bool _hasText = false;
 
@@ -115,7 +119,7 @@ class _GlowingSearchbarState extends State<GlowingSearchbar>
     return AnimatedBuilder(
       animation: Listenable.merge([_glowAnimation, _borderAnimation]),
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           height: 56,
           child: Stack(
             children: [

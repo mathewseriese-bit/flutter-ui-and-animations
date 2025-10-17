@@ -32,6 +32,8 @@ class SmoothCardExpansionScreen extends StatelessWidget {
     ),
   ];
 
+  const SmoothCardExpansionScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,7 +97,7 @@ class CardData {
 class AnimatedCard extends StatefulWidget {
   final CardData cardData;
 
-  const AnimatedCard({Key? key, required this.cardData}) : super(key: key);
+  const AnimatedCard({super.key, required this.cardData});
 
   @override
   _AnimatedCardState createState() => _AnimatedCardState();

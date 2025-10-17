@@ -281,7 +281,7 @@ class BadWidget extends StatelessWidget {
   final String title;
   final Color color;
   
-  BadWidget({super.key, required this.title, required this.color});
+  const BadWidget({super.key, required this.title, required this.color});
 
   @override
   Widget build(BuildContext context) {

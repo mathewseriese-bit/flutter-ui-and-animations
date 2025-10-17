@@ -3,6 +3,8 @@ import 'dart:async';
 import 'dart:math' as math;
 
 class AnimatedUploadingButtonScreen extends StatefulWidget {
+  const AnimatedUploadingButtonScreen({super.key});
+
   @override
   _AnimatedUploadingButtonScreenState createState() => _AnimatedUploadingButtonScreenState();
 }
@@ -471,10 +473,10 @@ class ParticleWidget extends StatelessWidget {
   final int index;
 
   const ParticleWidget({
-    Key? key,
+    super.key,
     required this.animation,
     required this.index,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

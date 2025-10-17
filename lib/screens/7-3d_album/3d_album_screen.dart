@@ -14,13 +14,12 @@ dependencies:
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:vector_math/vector_math_64.dart' as math;
 import 'dart:math' as math_core;
 import 'dart:ui';
 
 // SPLASH SCREEN WITH FUTURISTIC LOADING ANIMATION
 class SplashScreen3D extends StatefulWidget {
-  const SplashScreen3D({Key? key}) : super(key: key);
+  const SplashScreen3D({super.key});
 
   @override
   State<SplashScreen3D> createState() => _SplashScreen3DState();
@@ -208,7 +207,7 @@ class _SplashScreen3DState extends State<SplashScreen3D>
 
 // LOADING DOTS ANIMATION
 class LoadingDots extends StatefulWidget {
-  const LoadingDots({Key? key}) : super(key: key);
+  const LoadingDots({super.key});
 
   @override
   State<LoadingDots> createState() => _LoadingDotsState();
@@ -337,7 +336,7 @@ class Particle {
 
 // MAIN ALBUM HOME PAGE
 class AlbumHomePage extends StatefulWidget {
-  const AlbumHomePage({Key? key}) : super(key: key);
+  const AlbumHomePage({super.key});
 
   @override
   State<AlbumHomePage> createState() => _AlbumHomePageState();
@@ -666,11 +665,11 @@ class Album3DCard extends StatefulWidget {
   final double animationValue;
 
   const Album3DCard({
-    Key? key,
+    super.key,
     required this.album,
     required this.isActive,
     required this.animationValue,
-  }) : super(key: key);
+  });
 
   @override
   State<Album3DCard> createState() => _Album3DCardState();
@@ -1004,7 +1003,7 @@ class HolographicEffectPainter extends CustomPainter {
 class AlbumDetailPage extends StatefulWidget {
   final Album album;
 
-  const AlbumDetailPage({Key? key, required this.album}) : super(key: key);
+  const AlbumDetailPage({super.key, required this.album});
 
   @override
   State<AlbumDetailPage> createState() => _AlbumDetailPageState();

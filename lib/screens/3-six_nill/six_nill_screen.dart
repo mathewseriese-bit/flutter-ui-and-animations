@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class SixNillScreen extends StatefulWidget {
-  const SixNillScreen({Key? key}) : super(key: key);
+  const SixNillScreen({super.key});
 
   @override
   State<SixNillScreen> createState() => _SixNillScreenState();

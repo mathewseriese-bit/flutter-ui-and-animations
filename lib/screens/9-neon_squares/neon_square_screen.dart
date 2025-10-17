@@ -1,10 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 
 
 class NeonAnimationScreen extends StatefulWidget {
+  const NeonAnimationScreen({super.key});
+
   @override
   _NeonAnimationScreenState createState() => _NeonAnimationScreenState();
 }

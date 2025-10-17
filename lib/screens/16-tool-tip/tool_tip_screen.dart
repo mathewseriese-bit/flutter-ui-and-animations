@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TooltipScreen extends StatefulWidget {
+  const TooltipScreen({super.key});
+
   @override
   _TooltipScreenState createState() => _TooltipScreenState();
 }
@@ -86,6 +88,8 @@ class _TooltipScreenState extends State<TooltipScreen>
 }
 
 class SocialMediaGrid extends StatefulWidget {
+  const SocialMediaGrid({super.key});
+
   @override
   _SocialMediaGridState createState() => _SocialMediaGridState();
 }
@@ -140,7 +144,7 @@ class _SocialMediaGridState extends State<SocialMediaGrid> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 300,
       height: 300,
       child: GridView.builder(
@@ -172,13 +176,13 @@ class NeuomorphicSocialButton extends StatefulWidget {
   final Function(int, bool) onExpansionChanged;
 
   const NeuomorphicSocialButton({
-    Key? key, 
+    super.key, 
     required this.data,
     required this.index,
     required this.isExpanded,
     required this.shouldShrink,
     required this.onExpansionChanged,
-  }) : super(key: key);
+  });
 
   @override
   _NeuomorphicSocialButtonState createState() => _NeuomorphicSocialButtonState();
@@ -445,10 +449,10 @@ class AnimatedTooltip extends StatelessWidget {
   final Color color;
 
   const AnimatedTooltip({
-    Key? key,
+    super.key,
     required this.text,
     required this.color,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

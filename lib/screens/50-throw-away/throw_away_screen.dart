@@ -3,6 +3,8 @@ import 'dart:math' as math;
 
 
 class ThrowAwayScreen extends StatefulWidget {
+  const ThrowAwayScreen({super.key});
+
   @override
   _ThrowAwayScreenState createState() => _ThrowAwayScreenState();
 }
@@ -220,14 +222,14 @@ class ThrowableWidget extends StatefulWidget {
   final Function(int, Offset) onThrow;
   final int index;
 
-  ThrowableWidget({
-    Key? key,
+  const ThrowableWidget({
+    super.key,
     required this.color,
     required this.icon,
     required this.title,
     required this.onThrow,
     required this.index,
-  }) : super(key: key);
+  });
 
   @override
   _ThrowableWidgetState createState() => _ThrowableWidgetState();
@@ -390,7 +392,7 @@ class ShimmerText extends StatefulWidget {
   final String text;
   final TextStyle style;
 
-  ShimmerText({required this.text, required this.style});
+  const ShimmerText({super.key, required this.text, required this.style});
 
   @override
   _ShimmerTextState createState() => _ShimmerTextState();
@@ -490,7 +492,7 @@ class Particle {
 class AnimatedParticles extends StatefulWidget {
   final ParticleSystem particle;
 
-  AnimatedParticles({required this.particle});
+  const AnimatedParticles({super.key, required this.particle});
 
   @override
   _AnimatedParticlesState createState() => _AnimatedParticlesState();

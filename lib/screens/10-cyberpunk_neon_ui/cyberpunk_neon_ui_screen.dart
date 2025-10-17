@@ -5,6 +5,8 @@ import 'dart:math' as math;
 
 
 class CyberpunkDashboard extends StatefulWidget {
+  const CyberpunkDashboard({super.key});
+
   @override
   _CyberpunkDashboardState createState() => _CyberpunkDashboardState();
 }
@@ -211,7 +213,7 @@ class _CyberpunkDashboardState extends State<CyberpunkDashboard>
     return AnimatedBuilder(
       animation: _borderAnimation,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           height: 100,
           child: CustomPaint(
             painter: NeonBorderPainter(
@@ -328,7 +330,7 @@ class _CyberpunkDashboardState extends State<CyberpunkDashboard>
     return AnimatedBuilder(
       animation: _borderAnimation,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           height: 200,
           child: CustomPaint(
             painter: NeonBorderPainter(
@@ -494,7 +496,7 @@ class _CyberpunkDashboardState extends State<CyberpunkDashboard>
     return AnimatedBuilder(
       animation: _borderAnimation,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: 100,
           height: 50,
           child: CustomPaint(

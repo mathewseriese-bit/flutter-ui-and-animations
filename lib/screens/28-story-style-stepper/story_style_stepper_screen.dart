@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 
 class StoryStyleStepperScreen extends StatefulWidget {
+  const StoryStyleStepperScreen({super.key});
+
   @override
   _StoryStyleStepperScreenState createState() => _StoryStyleStepperScreenState();
 }
 
 class _StoryStyleStepperScreenState extends State<StoryStyleStepperScreen>
     with TickerProviderStateMixin {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   late AnimationController _progressController;
   late AnimationController _slideController;
   late Animation<double> _slideAnimation;

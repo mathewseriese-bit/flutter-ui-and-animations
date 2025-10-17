@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'dart:ui' as ui;
 
 class RippleHeatmapScreen extends StatefulWidget {
+  const RippleHeatmapScreen({super.key});
+
   @override
   _RippleHeatmapScreenState createState() => _RippleHeatmapScreenState();
 }

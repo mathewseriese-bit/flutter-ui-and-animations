@@ -3,6 +3,8 @@ import 'dart:async';
 import 'dart:math' as math;
 
 class DigitalClockScreen extends StatefulWidget {
+  const DigitalClockScreen({super.key});
+
   @override
   _DigitalClockScreenState createState() => _DigitalClockScreenState();
 }

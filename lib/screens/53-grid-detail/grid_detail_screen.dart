@@ -20,6 +20,8 @@ class GridItem {
 }
 
 class GridDetailScreen extends StatefulWidget {
+  const GridDetailScreen({super.key});
+
   @override
   _GridDetailScreenState createState() => _GridDetailScreenState();
 }
@@ -328,7 +330,7 @@ class _GridDetailScreenState extends State<GridDetailScreen>
 class DetailScreen extends StatefulWidget {
   final GridItem item;
 
-  const DetailScreen({Key? key, required this.item}) : super(key: key);
+  const DetailScreen({super.key, required this.item});
 
   @override
   _DetailScreenState createState() => _DetailScreenState();

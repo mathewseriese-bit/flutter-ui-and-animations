@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AutoAnimatedSearchSuggestionScreen extends StatefulWidget {
+  const AutoAnimatedSearchSuggestionScreen({super.key});
+
   @override
   _AutoAnimatedSearchSuggestionScreenState createState() =>
       _AutoAnimatedSearchSuggestionScreenState();

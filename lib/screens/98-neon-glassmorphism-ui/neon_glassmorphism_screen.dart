@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'dart:math' as math;
 
 class NeonGlassmorphismScreen extends StatefulWidget {
+  const NeonGlassmorphismScreen({super.key});
+
   @override
   _NeonGlassmorphismScreenState createState() => _NeonGlassmorphismScreenState();
 }
@@ -277,7 +279,7 @@ class _NeonGlassmorphismScreenState extends State<NeonGlassmorphismScreen>
 class NeonGlassCard extends StatelessWidget {
   final Widget child;
   
-  const NeonGlassCard({Key? key, required this.child}) : super(key: key);
+  const NeonGlassCard({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -322,10 +324,10 @@ class NeonText extends StatelessWidget {
   
   const NeonText(
     this.text, {
-    Key? key,
+    super.key,
     this.fontSize = 16,
     this.color = Colors.white,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -359,14 +361,14 @@ class AnimatedStatsCard extends StatefulWidget {
   final int delay;
   
   const AnimatedStatsCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.value,
     required this.icon,
     required this.color,
     required this.animation,
     required this.delay,
-  }) : super(key: key);
+  });
 
   @override
   _AnimatedStatsCardState createState() => _AnimatedStatsCardState();
@@ -474,11 +476,11 @@ class AnimatedBackgroundOrb extends StatelessWidget {
   final Color color;
   
   const AnimatedBackgroundOrb({
-    Key? key,
+    super.key,
     required this.animation,
     required this.offset,
     required this.color,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -511,7 +513,7 @@ class NeonNavButton extends StatefulWidget {
   final IconData icon;
   final bool isActive;
   
-  const NeonNavButton(this.icon, this.isActive, {Key? key}) : super(key: key);
+  const NeonNavButton(this.icon, this.isActive, {super.key});
 
   @override
   _NeonNavButtonState createState() => _NeonNavButtonState();

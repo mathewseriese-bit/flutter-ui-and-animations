@@ -3,6 +3,8 @@ import 'dart:math' as math;
 import 'dart:ui';
 
 class AuraCardGeneratorScreen extends StatefulWidget {
+  const AuraCardGeneratorScreen({super.key});
+
   @override
   _AuraCardGeneratorScreenState createState() => _AuraCardGeneratorScreenState();
 }
@@ -266,7 +268,7 @@ class _AuraCardGeneratorScreenState extends State<AuraCardGeneratorScreen>
                               }),
                               
                               // Main Aura Card
-                              Container(
+                              SizedBox(
                                 width: 280,
                                 height: 400,
                                 child: Stack(

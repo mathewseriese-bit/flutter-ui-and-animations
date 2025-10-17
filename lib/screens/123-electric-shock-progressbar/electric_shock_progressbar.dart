@@ -1,8 +1,9 @@
 import 'dart:math' as math;
-import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 /// Demo screen showcasing the Electric Shock Progress Bar
 class ElectricShockProgressbar extends StatefulWidget {
+  const ElectricShockProgressbar({super.key});
+
   @override
   _ElectricShockProgressbarState createState() => _ElectricShockProgressbarState();
 }
@@ -155,7 +156,7 @@ class ElectricShockProgressBar extends StatefulWidget {
   final int animationDuration;
   
   const ElectricShockProgressBar({
-    Key? key,
+    super.key,
     required this.progress,
     this.width = 300,
     this.height = 60,
@@ -168,7 +169,7 @@ class ElectricShockProgressBar extends StatefulWidget {
     this.glowIntensity = 1.0,
     this.pulseEffect = false,
     this.animationDuration = 100,
-  }) : super(key: key);
+  });
 
   @override
   _ElectricShockProgressBarState createState() => _ElectricShockProgressBarState();
@@ -181,7 +182,7 @@ class _ElectricShockProgressBarState extends State<ElectricShockProgressBar>
   late Animation<double> _shockAnimation;
   late Animation<double> _pulseAnimation;
   
-  List<ElectricArc> _electricArcs = [];
+  final List<ElectricArc> _electricArcs = [];
   final math.Random _random = math.Random();
 
   @override

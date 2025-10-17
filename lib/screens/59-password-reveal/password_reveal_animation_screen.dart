@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class PasswordRevealAnimationScreen extends StatelessWidget {
+  const PasswordRevealAnimationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +49,8 @@ class PasswordRevealAnimationScreen extends StatelessWidget {
 }
 
 class FuturisticPasswordField extends StatefulWidget {
+  const FuturisticPasswordField({super.key});
+
   @override
   _FuturisticPasswordFieldState createState() => _FuturisticPasswordFieldState();
 }
@@ -55,7 +59,7 @@ class _FuturisticPasswordFieldState extends State<FuturisticPasswordField>
     with TickerProviderStateMixin {
   bool _isPasswordVisible = false;
   bool _isPressed = false;
-  String _password = "MySecurePass123!";
+  final String _password = "MySecurePass123!";
   
   late AnimationController _blinkController;
   late AnimationController _revealController;

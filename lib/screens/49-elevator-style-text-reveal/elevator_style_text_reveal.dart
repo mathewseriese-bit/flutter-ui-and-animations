@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ElevatorStyleTextReveal extends StatelessWidget {
+  const ElevatorStyleTextReveal({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,12 +105,12 @@ class WindowSlideReveal extends StatefulWidget {
   final Duration duration;
 
   const WindowSlideReveal({
-    Key? key,
+    super.key,
     required this.child,
     this.width = 300,
     this.height = 200,
     this.duration = const Duration(milliseconds: 800),
-  }) : super(key: key);
+  });
 
   @override
   _WindowSlideRevealState createState() => _WindowSlideRevealState();
@@ -216,7 +218,7 @@ class _WindowSlideRevealState extends State<WindowSlideReveal>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _toggleReveal,
-      child: Container(
+      child: SizedBox(
         width: widget.width + 100,
         height: widget.height + 50,
         child: Stack(

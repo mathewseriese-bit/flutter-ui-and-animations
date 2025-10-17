@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class UnlockCardAnimationScreen extends StatefulWidget {
+  const UnlockCardAnimationScreen({super.key});
+
   @override
   _UnlockCardAnimationScreenState createState() => _UnlockCardAnimationScreenState();
 }
@@ -181,7 +183,7 @@ class FeatureCard extends StatefulWidget {
   final AnimationController floatController;
 
   const FeatureCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.subtitle,
     required this.icon,
@@ -189,7 +191,7 @@ class FeatureCard extends StatefulWidget {
     required this.progress,
     required this.gradientColors,
     required this.floatController,
-  }) : super(key: key);
+  });
 
   @override
   _FeatureCardState createState() => _FeatureCardState();

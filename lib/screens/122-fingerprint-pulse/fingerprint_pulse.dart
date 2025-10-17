@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class FingerprintPulse extends StatelessWidget {
+  const FingerprintPulse({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +82,7 @@ class FingerprintPulseUnlock extends StatefulWidget {
   final double successRate;
 
   const FingerprintPulseUnlock({
-    Key? key,
+    super.key,
     this.onUnlockSuccess,
     this.onUnlockFailed,
     this.size = 200.0,
@@ -94,7 +96,7 @@ class FingerprintPulseUnlock extends StatefulWidget {
     this.maxPulseRings = 4,
     this.simulateAuthentication = true,
     this.successRate = 0.7,
-  }) : super(key: key);
+  });
 
   @override
   _FingerprintPulseUnlockState createState() => _FingerprintPulseUnlockState();
@@ -232,7 +234,7 @@ class _FingerprintPulseUnlockState extends State<FingerprintPulseUnlock>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: widget.size * 2,
       height: widget.size * 2,
       child: Stack(
@@ -356,7 +358,7 @@ class _FingerprintPulseUnlockState extends State<FingerprintPulseUnlock>
       builder: (context, child) {
         return ClipRRect(
           borderRadius: BorderRadius.circular(widget.size * 0.3),
-          child: Container(
+          child: SizedBox(
             width: widget.size * 0.6,
             height: widget.size * 0.6,
             child: Stack(

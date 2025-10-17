@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'dart:math' as math;
 
 class GlassMorphismEffectUiScreen extends StatefulWidget {
+  const GlassMorphismEffectUiScreen({super.key});
+
   @override
   _GlassMorphismEffectUiScreenState createState() => _GlassMorphismEffectUiScreenState();
 }
@@ -277,13 +279,13 @@ class GlassContainer extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
 
   const GlassContainer({
-    Key? key,
+    super.key,
     required this.child,
     this.width,
     this.height,
     this.borderRadius = 20,
     this.margin,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -334,12 +336,12 @@ class StatCard extends StatefulWidget {
   final int delay;
 
   const StatCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.value,
     required this.icon,
     required this.delay,
-  }) : super(key: key);
+  });
 
   @override
   _StatCardState createState() => _StatCardState();
@@ -425,11 +427,11 @@ class ActionButton extends StatefulWidget {
   final int delay;
 
   const ActionButton({
-    Key? key,
+    super.key,
     required this.icon,
     required this.label,
     required this.delay,
-  }) : super(key: key);
+  });
 
   @override
   _ActionButtonState createState() => _ActionButtonState();
@@ -515,12 +517,12 @@ class TransactionItem extends StatefulWidget {
   final int delay;
 
   const TransactionItem({
-    Key? key,
+    super.key,
     required this.title,
     required this.amount,
     required this.time,
     required this.delay,
-  }) : super(key: key);
+  });
 
   @override
   _TransactionItemState createState() => _TransactionItemState();

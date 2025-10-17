@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'dart:math' as math;
 
 class LampControlScreen extends StatefulWidget {
+  const LampControlScreen({super.key});
+
   @override
   _LampControlScreenState createState() => _LampControlScreenState();
 }
@@ -223,7 +225,7 @@ class _LampControlScreenState extends State<LampControlScreen>
     return Positioned(
       left: _lampPosition.dx - 100 + swingOffset,
       top: _lampPosition.dy,
-      child: Container(
+      child: SizedBox(
         width: 200,
         height: 180,
         child: Stack(
@@ -285,7 +287,7 @@ class _LampControlScreenState extends State<LampControlScreen>
             // Main lamp shade - realistic pendant design
             Positioned(
               top: 25,
-              child: Container(
+              child: SizedBox(
                 width: 160,
                 height: 140,
                 child: Stack(
@@ -361,7 +363,7 @@ class _LampControlScreenState extends State<LampControlScreen>
                       Positioned(
                         bottom: 30,
                         left: 65,
-                        child: Container(
+                        child: SizedBox(
                           width: 30,
                           height: 50,
                           child: Stack(
@@ -395,7 +397,7 @@ class _LampControlScreenState extends State<LampControlScreen>
                               Positioned(
                                 top: 8,
                                 left: 10,
-                                child: Container(
+                                child: SizedBox(
                                   width: 10,
                                   height: 30,
                                   child: Column(

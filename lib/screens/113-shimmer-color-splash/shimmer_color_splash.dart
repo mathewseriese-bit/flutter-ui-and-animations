@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class ShimmerColorSplash extends StatelessWidget {
+  const ShimmerColorSplash({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -134,7 +136,7 @@ class ShimmerColorSplashButton extends StatefulWidget {
   final bool enableHapticFeedback;
 
   const ShimmerColorSplashButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.child,
     this.buttonSize = const Size(200, 60),
@@ -156,7 +158,7 @@ class ShimmerColorSplashButton extends StatefulWidget {
     this.borderColor = const Color(0x4DFFFFFF),
     this.glowIntensity = 1.0,
     this.enableHapticFeedback = true,
-  }) : super(key: key);
+  });
 
   @override
   _ShimmerColorSplashButtonState createState() => _ShimmerColorSplashButtonState();
@@ -173,7 +175,7 @@ class _ShimmerColorSplashButtonState extends State<ShimmerColorSplashButton>
   late Animation<double> _buttonScaleAnimation;
   late Animation<double> _glowAnimation;
   
-  List<ShimmerWave> _waves = [];
+  final List<ShimmerWave> _waves = [];
   bool _isPressed = false;
 
   @override
@@ -310,7 +312,7 @@ class _ShimmerColorSplashButtonState extends State<ShimmerColorSplashButton>
         builder: (context, child) {
           return Transform.scale(
             scale: _buttonScaleAnimation.value,
-            child: Container(
+            child: SizedBox(
               width: widget.buttonSize.width,
               height: widget.buttonSize.height,
               child: Stack(
@@ -335,7 +337,7 @@ class _ShimmerColorSplashButtonState extends State<ShimmerColorSplashButton>
 
                   // Shimmer waves
                   if (_splashAnimation.value > 0)
-                    ..._waves.map((wave) => _buildWave(wave)).toList(),
+                    ..._waves.map((wave) => _buildWave(wave)),
 
                   // Main button
                   Container(

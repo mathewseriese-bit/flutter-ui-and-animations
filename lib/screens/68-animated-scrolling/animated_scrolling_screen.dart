@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 
 class AnimatedScrollingScreen extends StatefulWidget {
+  const AnimatedScrollingScreen({super.key});
+
   @override
   _AnimatedScrollingScreenState createState() => _AnimatedScrollingScreenState();
 }

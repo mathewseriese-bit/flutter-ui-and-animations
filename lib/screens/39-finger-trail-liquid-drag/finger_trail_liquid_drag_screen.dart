@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'dart:ui' as ui;
 
 
 class FingerTrailLiquidDragScreen extends StatefulWidget {
+  const FingerTrailLiquidDragScreen({super.key});
+
   @override
   _FingerTrailLiquidDragScreenState createState() => _FingerTrailLiquidDragScreenState();
 }

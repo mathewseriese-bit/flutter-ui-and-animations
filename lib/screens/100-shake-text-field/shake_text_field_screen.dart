@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class ShakeTextFieldScreen extends StatefulWidget {
+  const ShakeTextFieldScreen({super.key});
+
   @override
   _ShakeTextFieldScreenState createState() => _ShakeTextFieldScreenState();
 }

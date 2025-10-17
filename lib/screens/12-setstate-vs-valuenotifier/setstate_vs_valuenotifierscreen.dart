@@ -3,6 +3,8 @@ import 'dart:math';
 
 
 class PerformanceDemoSetStateVsValueNotifier extends StatelessWidget {
+  const PerformanceDemoSetStateVsValueNotifier({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +30,8 @@ class PerformanceDemoSetStateVsValueNotifier extends StatelessWidget {
 
 // ❌ SLOW APPROACH - setState()
 class SlowSetStateExample extends StatefulWidget {
+  const SlowSetStateExample({super.key});
+
   @override
   _SlowSetStateExampleState createState() => _SlowSetStateExampleState();
 }
@@ -116,6 +120,8 @@ class _SlowSetStateExampleState extends State<SlowSetStateExample> {
 class FastValueNotifierExample extends StatelessWidget {
   final ValueNotifier<int> _counter = ValueNotifier(0);
   final ValueNotifier<int> _rebuildCount = ValueNotifier(0);
+
+  FastValueNotifierExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -206,7 +212,7 @@ class ExpensiveListTile extends StatelessWidget {
   static int setStateBuildCount = 0;
   static int valueNotifierBuildCount = 0;
 
-  ExpensiveListTile({required this.index, required this.isSetState});
+  const ExpensiveListTile({super.key, required this.index, required this.isSetState});
 
   @override
   Widget build(BuildContext context) {

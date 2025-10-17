@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class LoadingSpinnersScreen extends StatefulWidget {
-  const LoadingSpinnersScreen({Key? key}) : super(key: key);
+  const LoadingSpinnersScreen({super.key});
 
   @override
   State<LoadingSpinnersScreen> createState() => _LoadingSpinnersScreenState();
@@ -258,7 +258,7 @@ class SpinnerData {
 class NeonPulseSpinner extends StatefulWidget {
   final Color color;
 
-  const NeonPulseSpinner({Key? key, required this.color}) : super(key: key);
+  const NeonPulseSpinner({super.key, required this.color});
 
   @override
   State<NeonPulseSpinner> createState() => _NeonPulseSpinnerState();
@@ -358,7 +358,7 @@ class NeonPulsePainter extends CustomPainter {
 class GalaxyOrbitSpinner extends StatefulWidget {
   final Color color;
 
-  const GalaxyOrbitSpinner({Key? key, required this.color}) : super(key: key);
+  const GalaxyOrbitSpinner({super.key, required this.color});
 
   @override
   State<GalaxyOrbitSpinner> createState() => _GalaxyOrbitSpinnerState();
@@ -450,7 +450,7 @@ class GalaxyOrbitPainter extends CustomPainter {
 class LiquidWaveSpinner extends StatefulWidget {
   final Color color;
 
-  const LiquidWaveSpinner({Key? key, required this.color}) : super(key: key);
+  const LiquidWaveSpinner({super.key, required this.color});
 
   @override
   State<LiquidWaveSpinner> createState() => _LiquidWaveSpinnerState();
@@ -529,7 +529,7 @@ class LiquidWavePainter extends CustomPainter {
 class CrystalBloomSpinner extends StatefulWidget {
   final Color color;
 
-  const CrystalBloomSpinner({Key? key, required this.color}) : super(key: key);
+  const CrystalBloomSpinner({super.key, required this.color});
 
   @override
   State<CrystalBloomSpinner> createState() => _CrystalBloomSpinnerState();
@@ -623,7 +623,7 @@ class CrystalBloomPainter extends CustomPainter {
 class DigitalMatrixSpinner extends StatefulWidget {
   final Color color;
 
-  const DigitalMatrixSpinner({Key? key, required this.color}) : super(key: key);
+  const DigitalMatrixSpinner({super.key, required this.color});
 
   @override
   State<DigitalMatrixSpinner> createState() => _DigitalMatrixSpinnerState();
@@ -718,7 +718,7 @@ class DigitalMatrixPainter extends CustomPainter {
 class PlasmaRingSpinner extends StatefulWidget {
   final Color color;
 
-  const PlasmaRingSpinner({Key? key, required this.color}) : super(key: key);
+  const PlasmaRingSpinner({super.key, required this.color});
 
   @override
   State<PlasmaRingSpinner> createState() => _PlasmaRingSpinnerState();

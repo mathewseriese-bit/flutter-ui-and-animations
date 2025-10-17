@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CharacterLimitProgressBarScreen extends StatefulWidget {
+  const CharacterLimitProgressBarScreen({super.key});
+
   @override
   _CharacterLimitProgressBarScreenState createState() => _CharacterLimitProgressBarScreenState();
 }

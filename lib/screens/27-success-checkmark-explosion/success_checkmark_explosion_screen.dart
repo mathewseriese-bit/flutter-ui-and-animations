@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class SuccessCheckmarkExplosionScreen extends StatefulWidget {
+  const SuccessCheckmarkExplosionScreen({super.key});
+
   @override
   _SuccessCheckmarkExplosionScreenState createState() => _SuccessCheckmarkExplosionScreenState();
 }

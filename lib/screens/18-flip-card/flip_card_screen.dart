@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'dart:math' as math;
 
 class FlipCardAnimationScreen extends StatelessWidget {
+  const FlipCardAnimationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -143,11 +145,11 @@ class LiquidGlassFlipCard extends StatefulWidget {
   final Duration duration;
 
   const LiquidGlassFlipCard({
-    Key? key,
+    super.key,
     required this.frontChild,
     required this.backChild,
     this.duration = const Duration(milliseconds: 800),
-  }) : super(key: key);
+  });
 
   @override
   _LiquidGlassFlipCardState createState() => _LiquidGlassFlipCardState();
@@ -165,7 +167,7 @@ class _LiquidGlassFlipCardState extends State<LiquidGlassFlipCard>
   late Animation<double> _glowAnimation;
   late Animation<double> _liquidAnimation;
   
-  bool _isShowingFront = true;
+  final bool _isShowingFront = true;
 
   @override
   void initState() {
@@ -265,7 +267,7 @@ class _LiquidGlassFlipCardState extends State<LiquidGlassFlipCard>
         builder: (context, child) {
           return Transform.scale(
             scale: _scaleAnimation.value,
-            child: Container(
+            child: SizedBox(
               width: 300,
               height: 180,
               child: Stack(

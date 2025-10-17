@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AnimatedTextMaskingScreen extends StatefulWidget {
+  const AnimatedTextMaskingScreen({super.key});
+
   @override
   _AnimatedTextMaskingScreenState createState() => _AnimatedTextMaskingScreenState();
 }

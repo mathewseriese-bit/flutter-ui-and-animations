@@ -3,6 +3,8 @@ import 'dart:math' as math;
 import 'dart:async';
 
 class WaitingTimeAnimationScreen extends StatefulWidget {
+  const WaitingTimeAnimationScreen({super.key});
+
   @override
   _WaitingTimeAnimationScreenState createState() => _WaitingTimeAnimationScreenState();
 }
@@ -24,8 +26,8 @@ class _WaitingTimeAnimationScreenState extends State<WaitingTimeAnimationScreen>
   int _timeRemaining = 0;
   bool _isUploading = false;
   bool _isCompleted = false;
-  String _fileName = "Amazing_Design.zip";
-  String _fileSize = "2.4 MB";
+  final String _fileName = "Amazing_Design.zip";
+  final String _fileSize = "2.4 MB";
   List<Particle> particles = [];
   Timer? _timer;
 
@@ -309,7 +311,7 @@ class _WaitingTimeAnimationScreenState extends State<WaitingTimeAnimationScreen>
               builder: (context, child) {
                 return Transform.rotate(
                   angle: _rotationAnimation.value,
-                  child: Container(
+                  child: SizedBox(
                     width: 160,
                     height: 160,
                     child: CircularProgressIndicator(

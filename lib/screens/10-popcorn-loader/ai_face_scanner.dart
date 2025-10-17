@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AiFaceScanner extends StatefulWidget {
-  const AiFaceScanner({Key? key}) : super(key: key);
+  const AiFaceScanner({super.key});
 
   @override
   State<AiFaceScanner> createState() => _AiFaceScannerState();
@@ -145,7 +145,7 @@ class AIFaceScannerLoader extends StatefulWidget {
   final double cornerSize;
 
   const AIFaceScannerLoader({
-    Key? key,
+    super.key,
     required this.isScanning,
     this.size = 250.0,
     this.scanLineColor = const Color(0xFF00F5FF),
@@ -159,7 +159,7 @@ class AIFaceScannerLoader extends StatefulWidget {
     this.showGlow = true,
     this.scanLineThickness = 3.0,
     this.cornerSize = 30.0,
-  }) : super(key: key);
+  });
 
   @override
   State<AIFaceScannerLoader> createState() => _AIFaceScannerLoaderState();
@@ -308,7 +308,7 @@ class _AIFaceScannerLoaderState extends State<AIFaceScannerLoader>
         _particleAnimation,
       ]),
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: widget.size,
           height: widget.size,
           child: Stack(
@@ -410,7 +410,7 @@ class _AIFaceScannerLoaderState extends State<AIFaceScannerLoader>
   Widget _buildCornerFrames() {
     return Transform.rotate(
       angle: _rotationAnimation.value * 0.1, // Subtle rotation
-      child: Container(
+      child: SizedBox(
         width: widget.size - 40,
         height: widget.size - 40,
         child: Stack(

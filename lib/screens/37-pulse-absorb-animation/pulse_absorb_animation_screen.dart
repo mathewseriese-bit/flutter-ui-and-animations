@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PulseAbsorbAnimationScreen extends StatefulWidget {
+  const PulseAbsorbAnimationScreen({super.key});
+
   @override
   _PulseAbsorbAnimationScreenState createState() => _PulseAbsorbAnimationScreenState();
 }
@@ -264,7 +266,7 @@ class _PulseAbsorbAnimationScreenState extends State<PulseAbsorbAnimationScreen>
             SizedBox(height: 80),
             
             // Pulse Absorb Button
-            Container(
+            SizedBox(
               width: 200,
               height: 60,
               child: ElevatedButton(
@@ -391,7 +393,7 @@ class _PulseAbsorbAnimationScreenState extends State<PulseAbsorbAnimationScreen>
               SizedBox(height: 60),
               
               // Try again button
-              Container(
+              SizedBox(
                 width: 180,
                 height: 50,
                 child: ElevatedButton(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class ProfileCompletionWheelScreen extends StatefulWidget {
+  const ProfileCompletionWheelScreen({super.key});
+
   @override
   _ProfileCompletionWheelScreenState createState() => _ProfileCompletionWheelScreenState();
 }
@@ -133,7 +135,7 @@ class InteractiveProfileCompletionWheel extends StatefulWidget {
   final Duration animationDuration;
   
   const InteractiveProfileCompletionWheel({
-    Key? key,
+    super.key,
     this.size = 250,
     required this.hasPhoto,
     required this.hasBio,
@@ -148,7 +150,7 @@ class InteractiveProfileCompletionWheel extends StatefulWidget {
     this.completedColor = const Color(0xFF10B981),
     this.strokeWidth = 8.0,
     this.animationDuration = const Duration(milliseconds: 800),
-  }) : super(key: key);
+  });
 
   @override
   _InteractiveProfileCompletionWheelState createState() =>

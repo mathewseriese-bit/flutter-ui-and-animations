@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class EmojiExplosionScreen extends StatefulWidget {
-  const EmojiExplosionScreen({Key? key}) : super(key: key);
+  const EmojiExplosionScreen({super.key});
 
   @override
   State<EmojiExplosionScreen> createState() => _EmojiExplosionScreenState();
@@ -44,7 +44,7 @@ class _EmojiExplosionScreenState extends State<EmojiExplosionScreen>
             // Main content
             GestureDetector(
               onTapDown: (details) => _createExplosion(details.localPosition),
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 height: double.infinity,
                 child: Column(
@@ -295,7 +295,7 @@ class EmojiParticle {
 
 class AnimatedBackground extends StatefulWidget {
   final int index;
-  const AnimatedBackground({Key? key, required this.index}) : super(key: key);
+  const AnimatedBackground({super.key, required this.index});
 
   @override
   State<AnimatedBackground> createState() => _AnimatedBackgroundState();

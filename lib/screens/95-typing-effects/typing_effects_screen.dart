@@ -3,13 +3,15 @@ import 'dart:async';
 import 'dart:math' as math;
 
 class TypingEffectsScreen extends StatefulWidget {
+  const TypingEffectsScreen({super.key});
+
   @override
   _TypingEffectsScreenState createState() => _TypingEffectsScreenState();
 }
 
 class _TypingEffectsScreenState extends State<TypingEffectsScreen>
     with TickerProviderStateMixin {
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   int _currentPage = 0;
   late AnimationController _backgroundController;
   late Animation<double> _backgroundAnimation;
@@ -220,7 +222,7 @@ class _TypingEffectsScreenState extends State<TypingEffectsScreen>
 class ClassicTypingEffect extends StatefulWidget {
   final String text;
 
-  ClassicTypingEffect({required this.text});
+  const ClassicTypingEffect({super.key, required this.text});
 
   @override
   _ClassicTypingEffectState createState() => _ClassicTypingEffectState();
@@ -230,7 +232,7 @@ class _ClassicTypingEffectState extends State<ClassicTypingEffect>
     with TickerProviderStateMixin {
   String _displayedText = "";
   Timer? _timer;
-  bool _showCursor = true;
+  final bool _showCursor = true;
   late AnimationController _cursorController;
 
   @override
@@ -324,7 +326,7 @@ class _ClassicTypingEffectState extends State<ClassicTypingEffect>
 class NeonGlowTypingEffect extends StatefulWidget {
   final String text;
 
-  NeonGlowTypingEffect({required this.text});
+  const NeonGlowTypingEffect({super.key, required this.text});
 
   @override
   _NeonGlowTypingEffectState createState() => _NeonGlowTypingEffectState();
@@ -426,7 +428,7 @@ class _NeonGlowTypingEffectState extends State<NeonGlowTypingEffect>
 class MatrixTypingEffect extends StatefulWidget {
   final String text;
 
-  MatrixTypingEffect({required this.text});
+  const MatrixTypingEffect({super.key, required this.text});
 
   @override
   _MatrixTypingEffectState createState() => _MatrixTypingEffectState();
@@ -437,7 +439,7 @@ class _MatrixTypingEffectState extends State<MatrixTypingEffect>
   List<String> _displayedChars = [];
   Timer? _timer;
   late AnimationController _matrixController;
-  List<String> _matrixChars = "01アイウエオカキクケコサシスセソ".split('');
+  final List<String> _matrixChars = "01アイウエオカキクケコサシスセソ".split('');
 
   @override
   void initState() {
@@ -518,7 +520,7 @@ class _MatrixTypingEffectState extends State<MatrixTypingEffect>
 class GradientWaveTypingEffect extends StatefulWidget {
   final String text;
 
-  GradientWaveTypingEffect({required this.text});
+  const GradientWaveTypingEffect({super.key, required this.text});
 
   @override
   _GradientWaveTypingEffectState createState() =>
@@ -636,7 +638,7 @@ class _GradientWaveTypingEffectState extends State<GradientWaveTypingEffect>
 class ParticleTypingEffect extends StatefulWidget {
   final String text;
 
-  ParticleTypingEffect({required this.text});
+  const ParticleTypingEffect({super.key, required this.text});
 
   @override
   _ParticleTypingEffectState createState() => _ParticleTypingEffectState();
@@ -648,7 +650,7 @@ class _ParticleTypingEffectState extends State<ParticleTypingEffect>
   Timer? _timer;
   late AnimationController _particleController;
   late Animation<double> _particleAnimation;
-  List<Particle> _particles = [];
+  final List<Particle> _particles = [];
 
   @override
   void initState() {

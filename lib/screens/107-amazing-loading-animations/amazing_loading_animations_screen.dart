@@ -5,6 +5,8 @@ import 'dart:math' as math;
 // MAIN DEMO APP - Shows all loading animations in a beautiful showcase
 // ============================================================================
 class AmazingLoadingAnimationsScreen extends StatelessWidget {
+  const AmazingLoadingAnimationsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +21,8 @@ class AmazingLoadingAnimationsScreen extends StatelessWidget {
 }
 
 class LoadingAnimationsDemo extends StatefulWidget {
+  const LoadingAnimationsDemo({super.key});
+
   @override
   _LoadingAnimationsDemoState createState() => _LoadingAnimationsDemoState();
 }
@@ -198,14 +202,14 @@ class FuturisticRotatingCircle extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticRotatingCircle({
-    Key? key,
+    super.key,
     this.size = 60,
     this.primaryColor = const Color(0xFF00F5FF),
     this.secondaryColor = const Color(0xFF9C27B0),
     this.duration = const Duration(seconds: 2),
     this.strokeWidth = 4,
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticRotatingCircleState createState() => _FuturisticRotatingCircleState();
@@ -339,14 +343,14 @@ class FuturisticPulsingDots extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticPulsingDots({
-    Key? key,
+    super.key,
     this.dotCount = 5,
     this.dotSize = 12,
     this.dotColor = const Color(0xFF00F5FF),
     this.duration = const Duration(milliseconds: 1200),
     this.spacing = 16,
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticPulsingDotsState createState() => _FuturisticPulsingDotsState();
@@ -446,7 +450,7 @@ class FuturisticWaveLoader extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticWaveLoader({
-    Key? key,
+    super.key,
     this.barCount = 7,
     this.barWidth = 4,
     this.maxHeight = 40,
@@ -454,7 +458,7 @@ class FuturisticWaveLoader extends StatefulWidget {
     this.secondaryColor = const Color(0xFF9C27B0),
     this.duration = const Duration(milliseconds: 1500),
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticWaveLoaderState createState() => _FuturisticWaveLoaderState();
@@ -535,13 +539,13 @@ class FuturisticRotatingCube extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticRotatingCube({
-    Key? key,
+    super.key,
     this.size = 50,
     this.primaryColor = const Color(0xFF00F5FF),
     this.secondaryColor = const Color(0xFF9C27B0),
     this.duration = const Duration(seconds: 3),
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticRotatingCubeState createState() => _FuturisticRotatingCubeState();
@@ -630,13 +634,13 @@ class FuturisticLiquidFillLoader extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticLiquidFillLoader({
-    Key? key,
+    super.key,
     this.size = 80,
     this.liquidColor = const Color(0xFF00F5FF),
     this.backgroundColor = const Color(0xFF1A1A2E),
     this.duration = const Duration(seconds: 3),
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticLiquidFillLoaderState createState() =>
@@ -781,7 +785,7 @@ class FuturisticGradientSpinner extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticGradientSpinner({
-    Key? key,
+    super.key,
     this.size = 60,
     this.colors = const [
       Color(0xFF00F5FF),
@@ -792,7 +796,7 @@ class FuturisticGradientSpinner extends StatefulWidget {
     this.duration = const Duration(milliseconds: 1500),
     this.strokeWidth = 4,
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticGradientSpinnerState createState() =>
@@ -903,14 +907,14 @@ class FuturisticShimmerLoader extends StatefulWidget {
   final BorderRadius? borderRadius;
 
   const FuturisticShimmerLoader({
-    Key? key,
+    super.key,
     this.width = 200,
     this.height = 20,
     this.baseColor = const Color(0xFF1A1A2E),
     this.highlightColor = const Color(0xFF00F5FF),
     this.duration = const Duration(milliseconds: 1500),
     this.borderRadius,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticShimmerLoaderState createState() =>
@@ -975,12 +979,12 @@ class FuturisticHeartbeatLoader extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticHeartbeatLoader({
-    Key? key,
+    super.key,
     this.size = 50,
     this.heartColor = const Color(0xFFFF6EC7),
     this.duration = const Duration(milliseconds: 1000),
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticHeartbeatLoaderState createState() =>
@@ -1102,14 +1106,14 @@ class FuturisticTypingIndicator extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticTypingIndicator({
-    Key? key,
+    super.key,
     this.dotCount = 3,
     this.dotSize = 8,
     this.dotColor = const Color(0xFF00F5FF),
     this.duration = const Duration(milliseconds: 1400),
     this.spacing = 12,
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticTypingIndicatorState createState() =>
@@ -1206,13 +1210,13 @@ class FuturisticFlipLoader extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticFlipLoader({
-    Key? key,
+    super.key,
     this.size = 50,
     this.primaryColor = const Color(0xFF00F5FF),
     this.secondaryColor = const Color(0xFF9C27B0),
     this.duration = const Duration(milliseconds: 2000),
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticFlipLoaderState createState() => _FuturisticFlipLoaderState();
@@ -1290,13 +1294,13 @@ class FuturisticClockLoader extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticClockLoader({
-    Key? key,
+    super.key,
     this.size = 60,
     this.clockColor = const Color(0xFF00F5FF),
     this.handColor = const Color(0xFFFFFFFF),
     this.duration = const Duration(seconds: 4),
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticClockLoaderState createState() => _FuturisticClockLoaderState();
@@ -1444,13 +1448,13 @@ class FuturisticDNAHelixLoader extends StatefulWidget {
   final bool showGlow;
 
   const FuturisticDNAHelixLoader({
-    Key? key,
+    super.key,
     this.size = 80,
     this.primaryColor = const Color(0xFF00F5FF),
     this.secondaryColor = const Color(0xFF9C27B0),
     this.duration = const Duration(seconds: 3),
     this.showGlow = true,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticDNAHelixLoaderState createState() =>
@@ -1479,7 +1483,7 @@ class _FuturisticDNAHelixLoaderState extends State<FuturisticDNAHelixLoader>
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: widget.size,
           height: widget.size,
           child: CustomPaint(

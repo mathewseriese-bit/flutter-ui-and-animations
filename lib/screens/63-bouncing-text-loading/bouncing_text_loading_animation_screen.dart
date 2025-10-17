@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BouncingTextLoadingAnimationScreen extends StatefulWidget {
+  const BouncingTextLoadingAnimationScreen({super.key});
+
   @override
   _BouncingTextLoadingAnimationScreenState createState() => _BouncingTextLoadingAnimationScreenState();
 }
@@ -10,10 +12,10 @@ class _BouncingTextLoadingAnimationScreenState extends State<BouncingTextLoading
   late AnimationController _mainController;
   late AnimationController _glowController;
   late AnimationController _particleController;
-  List<AnimationController> _letterControllers = [];
-  List<Animation<double>> _bounceAnimations = [];
-  List<Animation<double>> _scaleAnimations = [];
-  List<Animation<Color?>> _colorAnimations = [];
+  final List<AnimationController> _letterControllers = [];
+  final List<Animation<double>> _bounceAnimations = [];
+  final List<Animation<double>> _scaleAnimations = [];
+  final List<Animation<Color?>> _colorAnimations = [];
   
   final String alphabet = 'MUHAMMAD';
   final List<Color> _neonColors = [
@@ -194,7 +196,7 @@ class _BouncingTextLoadingAnimationScreenState extends State<BouncingTextLoading
                   ),
                   
                   // Alphabet animation
-                  Container(
+                  SizedBox(
                     height: 100,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

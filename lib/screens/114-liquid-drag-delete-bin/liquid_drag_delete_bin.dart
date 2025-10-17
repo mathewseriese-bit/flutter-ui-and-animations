@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'dart:async';
 
 class LiquidDragDeleteBin extends StatefulWidget {
-  const LiquidDragDeleteBin({Key? key}) : super(key: key);
+  const LiquidDragDeleteBin({super.key});
 
   @override
   State<LiquidDragDeleteBin> createState() => _LiquidDragDeleteBinState();
@@ -121,10 +121,10 @@ class DraggableItemWidget extends StatefulWidget {
   final VoidCallback onDelete;
 
   const DraggableItemWidget({
-    Key? key,
+    super.key,
     required this.item,
     required this.onDelete,
-  }) : super(key: key);
+  });
 
   @override
   State<DraggableItemWidget> createState() => _DraggableItemWidgetState();
@@ -358,12 +358,12 @@ class LiquidDeleteBin extends StatefulWidget {
   final Duration animationDuration;
 
   const LiquidDeleteBin({
-    Key? key,
+    super.key,
     required this.onItemDeleted,
     this.binColor = Colors.red,
     this.binSize = 80,
     this.animationDuration = const Duration(milliseconds: 800),
-  }) : super(key: key);
+  });
 
   @override
   State<LiquidDeleteBin> createState() => _LiquidDeleteBinState();
@@ -456,14 +456,14 @@ class _LiquidDeleteBinState extends State<LiquidDeleteBin>
   @override
   Widget build(BuildContext context) {
     return DragTarget<DraggableItem>(
-      onWillAccept: (data) {
+      onWillAcceptWithDetails: (data) {
         setState(() => _isDragOver = true);
         return data != null;
       },
       onLeave: (data) {
         setState(() => _isDragOver = false);
       },
-      onAccept: (data) {
+      onAcceptWithDetails: (data) {
         setState(() => _isDragOver = false);
         _startAbsorption();
         widget.onItemDeleted(data.id);
@@ -477,7 +477,7 @@ class _LiquidDeleteBinState extends State<LiquidDeleteBin>
             _particleAnimation,
           ]),
           builder: (context, child) {
-            return Container(
+            return SizedBox(
               width: widget.binSize * 2,
               height: widget.binSize * 1.5,
               child: Stack(
@@ -505,7 +505,7 @@ class _LiquidDeleteBinState extends State<LiquidDeleteBin>
                           ),
                         ),
                       ),
-                    )).toList(),
+                    )),
                   
                   // Main liquid bin
                   Transform.scale(
@@ -728,7 +728,7 @@ class Particle {
 class ShimmerEffect extends StatefulWidget {
   final Color color;
 
-  const ShimmerEffect({Key? key, required this.color}) : super(key: key);
+  const ShimmerEffect({super.key, required this.color});
 
   @override
   State<ShimmerEffect> createState() => _ShimmerEffectState();

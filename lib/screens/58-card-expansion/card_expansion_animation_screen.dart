@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CardExpansionAnimationScreen extends StatelessWidget {
+  const CardExpansionAnimationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,13 +109,13 @@ class FuturisticCard extends StatefulWidget {
   final CardContent content;
 
   const FuturisticCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.subtitle,
     required this.icon,
     required this.gradient,
     required this.content,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticCardState createState() => _FuturisticCardState();
@@ -411,7 +413,7 @@ class _FuturisticCardState extends State<FuturisticCard>
                         ),
                       ],
                     ),
-                  )).toList(),
+                  )),
                 ],
               ),
             ),
@@ -448,14 +450,14 @@ class _FuturisticCardState extends State<FuturisticCard>
                         ),
                       ],
                     ),
-                  )).toList(),
+                  )),
                 ],
               ),
             ),
           ],
         ),
         SizedBox(height: 20),
-        Container(
+        SizedBox(
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {},

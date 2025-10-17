@@ -3,21 +3,23 @@ import 'dart:async';
 import 'dart:math' as math;
 
 class AutoFillFormScreen extends StatefulWidget {
+  const AutoFillFormScreen({super.key});
+
   @override
   _AutoFillFormScreenState createState() => _AutoFillFormScreenState();
 }
 
 class _AutoFillFormScreenState extends State<AutoFillFormScreen>
     with TickerProviderStateMixin {
-  List<AnimationController> _controllers = [];
-  List<Animation<double>> _fadeAnimations = [];
-  List<Animation<double>> _scaleAnimations = [];
-  List<Animation<double>> _shakeAnimations = [];
-  List<Animation<Color?>> _colorAnimations = [];
+  final List<AnimationController> _controllers = [];
+  final List<Animation<double>> _fadeAnimations = [];
+  final List<Animation<double>> _scaleAnimations = [];
+  final List<Animation<double>> _shakeAnimations = [];
+  final List<Animation<Color?>> _colorAnimations = [];
   
-  List<TextEditingController> _textControllers = [];
-  List<bool> _fieldCompleted = [];
-  List<bool> _isAnimating = [];
+  final List<TextEditingController> _textControllers = [];
+  final List<bool> _fieldCompleted = [];
+  final List<bool> _isAnimating = [];
   
   final List<String> _fieldLabels = [
     'Full Name',

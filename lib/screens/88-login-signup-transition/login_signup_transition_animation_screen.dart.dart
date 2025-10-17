@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginSignupTransitionAnimationScreen extends StatefulWidget {
+  const LoginSignupTransitionAnimationScreen({super.key});
+
   @override
   _LoginSignupTransitionAnimationScreenState createState() => _LoginSignupTransitionAnimationScreenState();
 }

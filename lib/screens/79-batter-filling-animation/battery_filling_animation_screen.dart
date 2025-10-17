@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class BatteryFillingAnimationScreen extends StatefulWidget {
+  const BatteryFillingAnimationScreen({super.key});
+
   @override
   _BatteryFillingAnimationScreenState createState() => _BatteryFillingAnimationScreenState();
 }
@@ -141,7 +143,7 @@ class _BatteryFillingAnimationScreenState extends State<BatteryFillingAnimationS
 
   Widget _buildBatteryDisplay() {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: 300,
         height: 400,
         child: AnimatedBuilder(

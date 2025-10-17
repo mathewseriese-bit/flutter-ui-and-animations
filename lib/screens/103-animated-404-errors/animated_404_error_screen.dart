@@ -3,6 +3,8 @@ import 'dart:math' as math;
 
 // Demo page to showcase different error types
 class Animated404ErrorScreen extends StatelessWidget {
+  const Animated404ErrorScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,13 +111,13 @@ abstract class BaseErrorPage extends StatefulWidget {
   final Color secondaryColor;
 
   const BaseErrorPage({
-    Key? key,
+    super.key,
     required this.errorCode,
     required this.title,
     required this.subtitle,
     required this.primaryColor,
     required this.secondaryColor,
-  }) : super(key: key);
+  });
 }
 
 abstract class BaseErrorPageState<T extends BaseErrorPage> extends State<T>
@@ -413,9 +415,8 @@ abstract class BaseErrorPageState<T extends BaseErrorPage> extends State<T>
 
 // 404 Not Found Page
 class Animated404Page extends BaseErrorPage {
-  Animated404Page({Key? key})
+  const Animated404Page({super.key})
       : super(
-          key: key,
           errorCode: '404',
           title: 'Page Not Found',
           subtitle: 'The page you\'re looking for seems to have wandered off into the digital void.',
@@ -433,7 +434,7 @@ class _Animated404PageState extends BaseErrorPageState<Animated404Page> {
     return AnimatedBuilder(
       animation: _rotateAnimation,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: 120,
           height: 120,
           child: Stack(
@@ -489,9 +490,8 @@ class _Animated404PageState extends BaseErrorPageState<Animated404Page> {
 
 // 500 Server Error Page
 class Animated500Page extends BaseErrorPage {
-  Animated500Page({Key? key})
+  const Animated500Page({super.key})
       : super(
-          key: key,
           errorCode: '500',
           title: 'Server Error',
           subtitle: 'Something went wrong on our end. Our engineers are working to fix it.',
@@ -509,7 +509,7 @@ class _Animated500PageState extends BaseErrorPageState<Animated500Page> {
     return AnimatedBuilder(
       animation: _pulseController,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: 120,
           height: 120,
           child: Stack(
@@ -543,9 +543,8 @@ class _Animated500PageState extends BaseErrorPageState<Animated500Page> {
 
 // 403 Forbidden Page
 class Animated403Page extends BaseErrorPage {
-  Animated403Page({Key? key})
+  const Animated403Page({super.key})
       : super(
-          key: key,
           errorCode: '403',
           title: 'Access Forbidden',
           subtitle: 'You don\'t have permission to access this resource.',
@@ -563,7 +562,7 @@ class _Animated403PageState extends BaseErrorPageState<Animated403Page> {
     return AnimatedBuilder(
       animation: _mainController,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: 120,
           height: 120,
           child: Stack(
@@ -625,9 +624,8 @@ class _Animated403PageState extends BaseErrorPageState<Animated403Page> {
 
 // Network Error Page
 class AnimatedNetworkErrorPage extends BaseErrorPage {
-  AnimatedNetworkErrorPage({Key? key})
+  const AnimatedNetworkErrorPage({super.key})
       : super(
-          key: key,
           errorCode: 'NET',
           title: 'Network Error',
           subtitle: 'Check your internet connection and try again.',
@@ -645,7 +643,7 @@ class _AnimatedNetworkErrorPageState extends BaseErrorPageState<AnimatedNetworkE
     return AnimatedBuilder(
       animation: _floatingController,
       builder: (context, child) {
-        return Container(
+        return SizedBox(
           width: 120,
           height: 120,
           child: CustomPaint(

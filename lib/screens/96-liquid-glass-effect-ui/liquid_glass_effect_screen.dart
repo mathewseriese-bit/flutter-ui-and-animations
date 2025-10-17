@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'dart:ui';
 
 class LiquidGlassEffectScreen extends StatefulWidget {
-  const LiquidGlassEffectScreen({Key? key}) : super(key: key);
+  const LiquidGlassEffectScreen({super.key});
 
   @override
   State<LiquidGlassEffectScreen> createState() =>
@@ -311,11 +311,11 @@ class GlassContainer extends StatelessWidget {
   final double? borderRadius;
 
   const GlassContainer({
-    Key? key,
+    super.key,
     required this.child,
     this.padding,
     this.borderRadius,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -362,13 +362,13 @@ class FeatureCard extends StatefulWidget {
   final int delay;
 
   const FeatureCard({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.subtitle,
     required this.gradient,
     this.delay = 0,
-  }) : super(key: key);
+  });
 
   @override
   State<FeatureCard> createState() => _FeatureCardState();
@@ -470,11 +470,11 @@ class GlassButton extends StatefulWidget {
   final bool isActive;
 
   const GlassButton({
-    Key? key,
+    super.key,
     required this.icon,
     required this.onTap,
     this.isActive = false,
-  }) : super(key: key);
+  });
 
   @override
   State<GlassButton> createState() => _GlassButtonState();

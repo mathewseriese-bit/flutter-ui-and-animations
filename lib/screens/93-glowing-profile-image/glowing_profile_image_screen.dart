@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class GlowingProfileImageScreen extends StatefulWidget {
+  const GlowingProfileImageScreen({super.key});
+
   @override
   _GlowingProfileImageScreenState createState() => _GlowingProfileImageScreenState();
 }
@@ -140,7 +142,7 @@ class _GlowingProfileImageScreenState extends State<GlowingProfileImageScreen>
                   builder: (context, child) {
                     return Transform.scale(
                       scale: _scaleAnimation.value,
-                      child: Container(
+                      child: SizedBox(
                         width: 220,
                         height: 220,
                         child: Stack(

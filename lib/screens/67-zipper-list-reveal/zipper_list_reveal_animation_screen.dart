@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ZipperListRevealAnimationScreen extends StatefulWidget {
+  const ZipperListRevealAnimationScreen({super.key});
+
   @override
   _ZipperListRevealAnimationScreenState createState() => _ZipperListRevealAnimationScreenState();
 }
@@ -12,10 +14,10 @@ class _ZipperListRevealAnimationScreenState extends State<ZipperListRevealAnimat
   late Animation<double> _zipperAnimation;
   late Animation<double> _pulseAnimation;
   
-  List<AnimationController> _itemControllers = [];
-  List<Animation<double>> _itemAnimations = [];
-  List<Animation<Offset>> _slideAnimations = [];
-  List<Animation<double>> _scaleAnimations = [];
+  final List<AnimationController> _itemControllers = [];
+  final List<Animation<double>> _itemAnimations = [];
+  final List<Animation<Offset>> _slideAnimations = [];
+  final List<Animation<double>> _scaleAnimations = [];
   
   final List<ZipperItem> _items = [
     ZipperItem(

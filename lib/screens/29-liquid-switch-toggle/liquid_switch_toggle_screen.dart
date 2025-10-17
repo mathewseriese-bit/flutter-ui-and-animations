@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LiquidSwitchToggleScreen extends StatefulWidget {
+  const LiquidSwitchToggleScreen({super.key});
+
   @override
   _LiquidSwitchToggleScreenState createState() => _LiquidSwitchToggleScreenState();
 }
@@ -173,12 +175,12 @@ class LiquidSwitch extends StatefulWidget {
   final double size;
 
   const LiquidSwitch({
-    Key? key,
+    super.key,
     required this.value,
     required this.onChanged,
     this.activeColor = Colors.blue,
     this.size = 56,
-  }) : super(key: key);
+  });
 
   @override
   _LiquidSwitchState createState() => _LiquidSwitchState();

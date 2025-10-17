@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'dart:async';
 
 class ButterflyGardenScreen extends StatefulWidget {
-  const ButterflyGardenScreen({Key? key}) : super(key: key);
+  const ButterflyGardenScreen({super.key});
 
   @override
   State<ButterflyGardenScreen> createState() => _ButterflyGardenScreenState();
@@ -179,7 +179,7 @@ class _ButterflyGardenScreenState extends State<ButterflyGardenScreen>
                       isPressed = false;
                     });
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: double.infinity,
                     height: double.infinity,
                     child: CustomPaint(

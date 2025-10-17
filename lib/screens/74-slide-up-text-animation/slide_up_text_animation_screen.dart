@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class SlideUpTextAnimationScreen extends StatefulWidget {
+  const SlideUpTextAnimationScreen({super.key});
+
   @override
   _SlideUpTextAnimationScreenState createState() => _SlideUpTextAnimationScreenState();
 }
@@ -104,7 +106,7 @@ class _SlideUpTextAnimationScreenState extends State<SlideUpTextAnimationScreen>
               SizedBox(height: 60),
               
               // Main text animation
-              Container(
+              SizedBox(
                 height: 120,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -137,7 +139,7 @@ class _SlideUpTextAnimationScreenState extends State<SlideUpTextAnimationScreen>
                     ),
                     
                     // Animated sliding text
-                    Container(
+                    SizedBox(
                       width: 280,
                       height: 70,
                       child: ClipRect(
@@ -218,7 +220,7 @@ class _SlideUpTextAnimationScreenState extends State<SlideUpTextAnimationScreen>
   }
 
   Widget _buildFloatingDots() {
-    return Container(
+    return SizedBox(
       height: 100,
       child: Stack(
         children: List.generate(5, (index) {

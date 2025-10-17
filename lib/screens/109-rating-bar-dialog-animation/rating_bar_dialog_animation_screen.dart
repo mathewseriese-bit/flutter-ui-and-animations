@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 class RatingBarDialogAnimationScreen extends StatelessWidget {
+  const RatingBarDialogAnimationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,14 +112,14 @@ class FuturisticRatingDialog extends StatefulWidget {
   final int maxRating;
 
   const FuturisticRatingDialog({
-    Key? key,
+    super.key,
     required this.title,
     required this.subtitle,
     required this.onRatingChanged,
     required this.onSubmit,
     this.config = const RatingDialogConfig(),
     this.maxRating = 5,
-  }) : super(key: key);
+  });
 
   @override
   State<FuturisticRatingDialog> createState() => _FuturisticRatingDialogState();
@@ -524,14 +526,14 @@ class AnimatedStar extends StatelessWidget {
   final bool enableGlow;
 
   const AnimatedStar({
-    Key? key,
+    super.key,
     required this.isSelected,
     required this.size,
     required this.animationValue,
     required this.primaryColor,
     required this.secondaryColor,
     required this.enableGlow,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

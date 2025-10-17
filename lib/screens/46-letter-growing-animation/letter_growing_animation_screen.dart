@@ -12,7 +12,7 @@ class GrowingTextWidget extends StatefulWidget {
   final bool autoStart;
 
   const GrowingTextWidget({
-    Key? key,
+    super.key,
     required this.text,
     this.baseStyle,
     this.animationDuration = const Duration(milliseconds: 800),
@@ -20,7 +20,7 @@ class GrowingTextWidget extends StatefulWidget {
     this.growthFactor = 1.3,
     this.glowColor,
     this.autoStart = true,
-  }) : super(key: key);
+  });
 
   @override
   State<GrowingTextWidget> createState() => _GrowingTextWidgetState();
@@ -180,7 +180,7 @@ class _GrowingTextWidgetState extends State<GrowingTextWidget>
 // Example usage widget
 
 class LetterGrowingAnimationScreen extends StatefulWidget {
-  const LetterGrowingAnimationScreen({Key? key}) : super(key: key);
+  const LetterGrowingAnimationScreen({super.key});
 
   @override
   State<LetterGrowingAnimationScreen> createState() => _LetterGrowingAnimationScreenState();
@@ -287,7 +287,7 @@ class AdvancedGrowingTextWidget extends StatefulWidget {
   final bool enableWave;
 
   const AdvancedGrowingTextWidget({
-    Key? key,
+    super.key,
     required this.text,
     this.baseStyle,
     this.animationDuration = const Duration(milliseconds: 1200),
@@ -296,7 +296,7 @@ class AdvancedGrowingTextWidget extends StatefulWidget {
     this.gradientColors = const [Colors.cyanAccent, Colors.purpleAccent],
     this.enableParticles = true,
     this.enableWave = true,
-  }) : super(key: key);
+  });
 
   @override
   State<AdvancedGrowingTextWidget> createState() => _AdvancedGrowingTextWidgetState();

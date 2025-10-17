@@ -4,6 +4,8 @@ import 'dart:math' as math;
 /// 🚀 FUTURISTIC ANIMATED APP UPDATE DIALOG ///
 
 class AppUpdateDialogAnimationScreen extends StatelessWidget {
+  const AppUpdateDialogAnimationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,7 +128,7 @@ class FuturisticUpdateDialog extends StatefulWidget {
   final VoidCallback? onLaterPressed;
 
   const FuturisticUpdateDialog({
-    Key? key,
+    super.key,
     // Visual defaults
     this.primaryColor = const Color(0xFF00D4FF),
     this.secondaryColor = const Color(0xFF7B2CBF),
@@ -171,7 +173,7 @@ class FuturisticUpdateDialog extends StatefulWidget {
     // Callbacks
     this.onUpdatePressed,
     this.onLaterPressed,
-  }) : super(key: key);
+  });
 
   @override
   _FuturisticUpdateDialogState createState() => _FuturisticUpdateDialogState();
@@ -690,7 +692,7 @@ class ParticleEffectPainter extends CustomPainter {
 
 /// 🚀 DEMO USAGE EXAMPLE
 class FuturisticUpdateDialogDemo extends StatelessWidget {
-  const FuturisticUpdateDialogDemo({Key? key}) : super(key: key);
+  const FuturisticUpdateDialogDemo({super.key});
 
   @override
   Widget build(BuildContext context) {

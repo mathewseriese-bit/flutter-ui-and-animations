@@ -23,6 +23,8 @@ class Product {
 }
 
 class FloatingAddtoCartScreen extends StatefulWidget {
+  const FloatingAddtoCartScreen({super.key});
+
   @override
   _FloatingAddtoCartScreenState createState() => _FloatingAddtoCartScreenState();
 }
@@ -205,7 +207,7 @@ class _FloatingAddtoCartScreenState extends State<FloatingAddtoCartScreen>
           ),
           // Floating icons overlay
           IgnorePointer(
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               height: double.infinity,
             ),
@@ -221,7 +223,7 @@ class ProductCard extends StatefulWidget {
   final VoidCallback onAddToCart;
   final GlobalKey cartKey;
 
-  ProductCard({
+  const ProductCard({super.key, 
     required this.product,
     required this.onAddToCart,
     required this.cartKey,
@@ -561,7 +563,7 @@ class _ProductCardState extends State<ProductCard>
                             scale: _buttonScale.value,
                             child: Opacity(
                               opacity: _buttonOpacity.value,
-                              child: Container(
+                              child: SizedBox(
                                 width: double.infinity,
                                 height: 36,
                                 child: ElevatedButton(
@@ -648,7 +650,7 @@ class _ProductCardState extends State<ProductCard>
 class MiniParticleEffect extends StatefulWidget {
   final Color color;
   
-  MiniParticleEffect({required this.color});
+  const MiniParticleEffect({super.key, required this.color});
   
   @override
   _MiniParticleEffectState createState() => _MiniParticleEffectState();
@@ -707,7 +709,7 @@ class _MiniParticleEffectState extends State<MiniParticleEffect>
   
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 60,
       child: Stack(

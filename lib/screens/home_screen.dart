@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:futurecore_codex/screens/3-six_nill/six_nill_screen.dart';
 import 'dart:math' as math;
-import '1-paf/subscription_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -105,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ],
                         ),
                       ),
-                      child: this.build(context), // Show current screen during transition
+                      child: build(context), // Show current screen during transition
                     ),
                   );
                 },

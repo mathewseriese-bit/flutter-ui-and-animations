@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'dart:math' as math;
 
 class AnimatedLightDarkThemeSwitchingScreen extends StatefulWidget {
+  const AnimatedLightDarkThemeSwitchingScreen({super.key});
+
   @override
   _AnimatedLightDarkThemeSwitchingScreenState createState() => _AnimatedLightDarkThemeSwitchingScreenState();
 }

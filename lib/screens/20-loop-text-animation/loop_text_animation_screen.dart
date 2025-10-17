@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class LoopTextAnimationScreen extends StatefulWidget {
-  const LoopTextAnimationScreen({Key? key}) : super(key: key);
+  const LoopTextAnimationScreen({super.key});
 
   @override
   State<LoopTextAnimationScreen> createState() =>

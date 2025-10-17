@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class TextFlipAnimationScreen extends StatefulWidget {
-  const TextFlipAnimationScreen({Key? key}) : super(key: key);
+  const TextFlipAnimationScreen({super.key});
 
   @override
   State<TextFlipAnimationScreen> createState() => _TextFlipAnimationScreenState();
@@ -200,11 +200,11 @@ class FlipTextCard extends StatefulWidget {
   final Duration delay;
 
   const FlipTextCard({
-    Key? key,
+    super.key,
     required this.originalText,
     required this.translatedText,
     required this.delay,
-  }) : super(key: key);
+  });
 
   @override
   State<FlipTextCard> createState() => _FlipTextCardState();

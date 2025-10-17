@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class BreathingCardsScreen extends StatefulWidget {
+  const BreathingCardsScreen({super.key});
+
   @override
   _BreathingCardsScreenState createState() => _BreathingCardsScreenState();
 }
@@ -214,13 +216,13 @@ class BreathingCard extends StatefulWidget {
   final double delay;
 
   const BreathingCard({
-    Key? key,
+    super.key,
     required this.cardData,
     required this.breathingAnimation,
     required this.pulseAnimation,
     required this.shimmerAnimation,
     required this.delay,
-  }) : super(key: key);
+  });
 
   @override
   _BreathingCardState createState() => _BreathingCardState();

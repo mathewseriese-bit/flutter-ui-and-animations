@@ -3,6 +3,8 @@ import 'dart:math' as math;
 
 
 class RollingSwitchToggleScreen extends StatefulWidget {
+  const RollingSwitchToggleScreen({super.key});
+
   @override
   _RollingSwitchToggleScreenState createState() => _RollingSwitchToggleScreenState();
 }
@@ -122,7 +124,7 @@ class RollingToggle extends StatefulWidget {
   final double height;
 
   const RollingToggle({
-    Key? key,
+    super.key,
     required this.value,
     required this.onChanged,
     this.activeColor = const Color(0xFF00F5FF),
@@ -130,7 +132,7 @@ class RollingToggle extends StatefulWidget {
     this.ballColor = Colors.white,
     this.width = 80,
     this.height = 40,
-  }) : super(key: key);
+  });
 
   @override
   _RollingToggleState createState() => _RollingToggleState();

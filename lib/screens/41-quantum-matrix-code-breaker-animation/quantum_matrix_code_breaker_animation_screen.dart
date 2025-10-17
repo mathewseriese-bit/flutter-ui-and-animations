@@ -4,7 +4,7 @@ import 'dart:async';
 
 
 class QuantumMatrixCodeBreakerAnimationScreen extends StatefulWidget {
-  const QuantumMatrixCodeBreakerAnimationScreen({Key? key}) : super(key: key);
+  const QuantumMatrixCodeBreakerAnimationScreen({super.key});
 
   @override
   State<QuantumMatrixCodeBreakerAnimationScreen> createState() => _QuantumMatrixCodeBreakerAnimationScreenState();

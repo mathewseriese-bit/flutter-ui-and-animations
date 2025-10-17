@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'dart:math' as math;
 
 class AnimatedNeuomorphicLoginScreen extends StatefulWidget {
+  const AnimatedNeuomorphicLoginScreen({super.key});
+
   @override
   _AnimatedNeuomorphicLoginScreenState createState() => _AnimatedNeuomorphicLoginScreenState();
 }
@@ -503,8 +505,7 @@ class Scale extends StatelessWidget {
   final double scale;
   final Widget child;
 
-  const Scale({Key? key, required this.scale, required this.child})
-      : super(key: key);
+  const Scale({super.key, required this.scale, required this.child});
 
   @override
   Widget build(BuildContext context) {

@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'dart:math' as math;
 
 class MenuItemsAnimationScreen extends StatefulWidget {
+  const MenuItemsAnimationScreen({super.key});
+
   @override
   _MenuItemsAnimationScreenState createState() =>
       _MenuItemsAnimationScreenState();
@@ -181,11 +183,11 @@ class AnimatedMenuTile extends StatefulWidget {
   final Animation<double> animation;
 
   const AnimatedMenuTile({
-    Key? key,
+    super.key,
     required this.menuItem,
     required this.index,
     required this.animation,
-  }) : super(key: key);
+  });
 
   @override
   _AnimatedMenuTileState createState() => _AnimatedMenuTileState();

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class ImageTransitionEffectScreen extends StatefulWidget {
+  const ImageTransitionEffectScreen({super.key});
+
   @override
   _ImageTransitionEffectScreenState createState() => _ImageTransitionEffectScreenState();
 }

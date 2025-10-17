@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class AiEyeScanner extends StatelessWidget {
-  const AiEyeScanner({Key? key}) : super(key: key);
+  const AiEyeScanner({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +81,7 @@ class AIEyeScanner extends StatefulWidget {
   final double laserThickness;
 
   const AIEyeScanner({
-    Key? key,
+    super.key,
     required this.profileImage,
     this.size = 250,
     this.scanDuration = const Duration(seconds: 2),
@@ -92,7 +92,7 @@ class AIEyeScanner extends StatefulWidget {
     this.autoStart = true,
     this.showParticles = true,
     this.laserThickness = 3.0,
-  }) : super(key: key);
+  });
 
   @override
   State<AIEyeScanner> createState() => _AIEyeScannerState();

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 enum ApiState { idle, loading, success, error, warning }
 
 class ApiCallAnimationsScreen extends StatefulWidget {
+  const ApiCallAnimationsScreen({super.key});
+
   @override
   _ApiCallAnimationsScreenState createState() => _ApiCallAnimationsScreenState();
 }

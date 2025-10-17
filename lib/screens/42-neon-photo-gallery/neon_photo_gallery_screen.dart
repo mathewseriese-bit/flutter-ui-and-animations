@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class NeonPhotoGalleryScreen extends StatefulWidget {
+  const NeonPhotoGalleryScreen({super.key});
+
   @override
   _NeonPhotoGalleryScreenState createState() => _NeonPhotoGalleryScreenState();
 }

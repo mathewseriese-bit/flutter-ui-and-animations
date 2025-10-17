@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class PinDropAnimationScreen extends StatefulWidget {
-  const PinDropAnimationScreen({Key? key}) : super(key: key);
+  const PinDropAnimationScreen({super.key});
 
   @override
   State<PinDropAnimationScreen> createState() => _PinDropAnimationScreenState();
@@ -155,7 +155,7 @@ class _PinDropAnimationScreenState extends State<PinDropAnimationScreen>
                 isSelected: isSelected,
                 onTap: () => _onPinTapped(index),
               );
-            }).toList(),
+            }),
             
             // Selected pin info card
             if (selectedPinIndex != null)
@@ -237,11 +237,11 @@ class AnimatedMapPinWidget extends StatelessWidget {
   final VoidCallback onTap;
 
   const AnimatedMapPinWidget({
-    Key? key,
+    super.key,
     required this.pin,
     required this.isSelected,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

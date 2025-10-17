@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class StreakTrackerScreen extends StatelessWidget {
-  const StreakTrackerScreen({Key? key}) : super(key: key);
+  const StreakTrackerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +100,7 @@ class AmazingStreakTracker extends StatefulWidget {
   final VoidCallback? onTap;
 
   const AmazingStreakTracker({
-    Key? key,
+    super.key,
     required this.streakCount,
     required this.goalTitle,
     this.subtitle = "Amazing progress!",
@@ -112,7 +112,7 @@ class AmazingStreakTracker extends StatefulWidget {
     this.height,
     this.animationDuration = const Duration(milliseconds: 2000),
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   State<AmazingStreakTracker> createState() => _AmazingStreakTrackerState();
