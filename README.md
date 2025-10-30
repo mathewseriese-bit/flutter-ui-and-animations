@@ -170,3 +170,40 @@ From seamless transitions to pixel-perfect microinteractions, I build things tha
 
 > ⚡ *“Code is not just logic, it’s an experience.”*
 
+
+---
+
+## 🛡️ Guardian Service Orchestration System
+
+This repository includes the **Guardian Service Orchestration System** for the Auralis backend services.
+
+**What is it?**  
+A production-ready service orchestrator that manages 5 backend microservices with automatic health monitoring, recovery, and zero duplicate launches.
+
+**Quick Start:**
+```powershell
+cd Auralis_App
+.\start_guardian.ps1
+```
+
+**Key Features:**
+- 🚀 Single command to start all services
+- 🔍 Automatic health monitoring (30s intervals)
+- 🔄 Auto-recovery with exponential backoff
+- 🛑 Clean shutdown with Ctrl+C
+- 📊 Comprehensive logging
+
+**Documentation:**
+- [**Quick Start Guide**](GUARDIAN_SYSTEM.md) - Get started in minutes
+- [**Architecture & Flows**](docs/services/guardian_architecture.md) - Visual diagrams
+- [**Deep Dive**](docs/services/guardian_startup_flow.md) - Complete analysis (21KB)
+- [**Quick Reference**](Auralis_App/QUICK_REFERENCE.md) - Command cheat sheet
+
+**Services Included:**
+- Character Extraction (8001)
+- Document Processor (8002)
+- Query Engine (8003)
+- Metadata Service (8004)
+- RAG Service (8005)
+
+Validation: Run `python Auralis_App/validate_guardian.py` ✅
