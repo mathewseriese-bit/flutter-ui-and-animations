@@ -13,8 +13,8 @@ All components of the Guardian & Service Orchestration system have been successf
 - ✓ STARTUP_ORDER configuration valid
 
 ### 2. Service Configuration
-- ✓ 5 services properly configured
-- ✓ Unique ports assigned (8001-8005)
+- ✓ 6 services properly configured
+- ✓ Unique ports assigned (8001-8006)
 - ✓ All required fields present (name, port, path, health_endpoint)
 
 ### 3. Service Files
@@ -49,12 +49,13 @@ All components of the Guardian & Service Orchestration system have been successf
    - `guardian.py` - 400+ lines of orchestration logic
    - `__init__.py` - Module exports
 
-2. **Backend Services** (5 services on ports 8001-8005)
+2. **Backend Services** (6 services on ports 8001-8006)
    - Character Extraction Service
    - Document Processor Service
    - Query Engine Service
    - Metadata Service
    - RAG Service
+   - Voice Synthesis Service
 
 3. **PowerShell Scripts**
    - `start_guardian.ps1` - Recommended entry point
@@ -179,7 +180,10 @@ Auralis_App/
         ├── metadata_service/
         │   ├── __init__.py
         │   └── service.py
-        └── rag_service/
+        ├── rag_service/
+        │   ├── __init__.py
+        │   └── service.py
+        └── voice_synthesis/
             ├── __init__.py
             └── service.py
 

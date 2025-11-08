@@ -60,11 +60,11 @@
 │  │ /health           │  │ /health           │               │
 │  └───────────────────┘  └───────────────────┘               │
 │                                                               │
-│  ┌───────────────────┐                                       │
-│  │ RAG Service       │                                       │
-│  │ Port: 8005        │                                       │
-│  │ /health           │                                       │
-│  └───────────────────┘                                       │
+│  ┌───────────────────┐  ┌───────────────────┐               │
+│  │ RAG Service       │  │ Voice Synthesis   │               │
+│  │ Port: 8005        │  │ Port: 8006        │               │
+│  │ /health           │  │ /health           │               │
+│  └───────────────────┘  └───────────────────┘               │
 │                                                               │
 │  Each service:                                                │
 │  • FastAPI application                                        │
@@ -99,7 +99,12 @@ Guardian Starts
     │       └──> Wait 2s for port bind
     │            └──> Wait 3s before next
     │
-    └──> 5. RAG Service (8005)
+    ├──> 5. RAG Service (8005)
+    │       │
+    │       └──> Wait 2s for port bind
+    │            └──> Wait 3s before next
+    │
+    └──> 6. Voice Synthesis (8006)
             │
             └──> Wait 2s for port bind
                  └──> All services started

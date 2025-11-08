@@ -63,6 +63,12 @@ STARTUP_ORDER = [
         'port': 8005,
         'path': 'backend/services/rag_service/service.py',
         'health_endpoint': '/health'
+    },
+    {
+        'name': 'voice_synthesis',
+        'port': 8006,
+        'path': 'backend/services/voice_synthesis/service.py',
+        'health_endpoint': '/health'
     }
 ]
 
