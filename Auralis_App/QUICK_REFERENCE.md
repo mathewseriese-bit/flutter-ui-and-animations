@@ -15,7 +15,7 @@ pip install -r requirements.txt
 .\start_guardian.ps1
 ```
 **What it does:**
-- Starts 5 services in order (8001-8005)
+- Starts 6 services in order (8001-8006)
 - Monitors health every 30 seconds
 - Auto-restarts failures
 - Logs to `guardian.log`
@@ -34,14 +34,14 @@ pip install -r requirements.txt
 ### What's Running?
 ```powershell
 Get-NetTCPConnection -State Listen | 
-  Where-Object { $_.LocalPort -in 8001..8005 }
+  Where-Object { $_.LocalPort -in 8001..8006 }
 ```
 
 ### Check Health
 ```powershell
 Invoke-WebRequest -Uri http://localhost:8001/health | ConvertFrom-Json
 Invoke-WebRequest -Uri http://localhost:8002/health | ConvertFrom-Json
-# ... etc for 8003, 8004, 8005
+# ... etc for 8003, 8004, 8005, 8006
 ```
 
 ### View Logs
@@ -93,6 +93,7 @@ Get-NetTCPConnection -State Listen |
 | Query Engine | 8003 | http://localhost:8003/health |
 | Metadata Service | 8004 | http://localhost:8004/health |
 | RAG Service | 8005 | http://localhost:8005/health |
+| Voice Synthesis | 8006 | http://localhost:8006/health |
 
 ## ⚠️ Don't Use These
 
@@ -119,7 +120,7 @@ Get-Process | Where-Object { $_.ProcessName -like "*python*" } | Stop-Process -F
 
 # 2. Verify ports are free
 Get-NetTCPConnection -State Listen | 
-  Where-Object { $_.LocalPort -in 8001..8005,9000 }
+  Where-Object { $_.LocalPort -in 8001..8006,9000 }
 
 # 3. Start fresh
 .\start_guardian.ps1

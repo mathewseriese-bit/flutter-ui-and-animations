@@ -63,6 +63,7 @@ The following services are managed by the Guardian:
 | Query Engine | 8003 | Executes queries |
 | Metadata Service | 8004 | Manages metadata |
 | RAG Service | 8005 | Retrieval-Augmented Generation |
+| Voice Synthesis | 8006 | Text-to-speech synthesis |
 | Guardian | 9000 | Service orchestrator (future API) |
 
 ## Service Health
@@ -91,7 +92,7 @@ Invoke-WebRequest -Uri http://localhost:8001/health | ConvertFrom-Json
 ```powershell
 # 1. Check what's using the ports
 Get-NetTCPConnection -State Listen | 
-  Where-Object { $_.LocalPort -in 8001..8005 }
+  Where-Object { $_.LocalPort -in 8001..8006 }
 
 # 2. Stop everything
 .\services_start\stop_all_services.ps1
@@ -241,7 +242,7 @@ For issues or questions:
 1. Check the [Guardian Startup Flow Documentation](../docs/services/guardian_startup_flow.md)
 2. Review `guardian.log` for error messages
 3. Verify all dependencies are installed
-4. Ensure ports 8001-8005 are available
+4. Ensure ports 8001-8006 are available
 
 ## Version
 

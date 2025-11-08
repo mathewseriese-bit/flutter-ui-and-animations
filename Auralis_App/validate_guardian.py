@@ -115,7 +115,7 @@ def validate_port_checking():
         print("✓ psutil module available")
         
         # Test port checking (without Guardian instance)
-        test_ports = [8001, 8002, 8003, 8004, 8005, 9000]
+        test_ports = [8001, 8002, 8003, 8004, 8005, 8006, 9000]
         
         for port in test_ports:
             in_use = any(
